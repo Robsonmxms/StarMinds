@@ -17,6 +17,8 @@
 		FE7328E528C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328E428C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift */; };
 		FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328F128C61FE2002B7FF9 /* ViewConfiguration.swift */; };
 		FE7328F628C625CE002B7FF9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328F528C625CE002B7FF9 /* HeaderView.swift */; };
+		FE73290028C63696002B7FF9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FE7328FF28C63696002B7FF9 /* Lottie */; };
+		FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FECDA6B528C6395300E2485E /* 89151-stars.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		FE7328E428C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarMindsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE7328F128C61FE2002B7FF9 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		FE7328F528C625CE002B7FF9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FECDA6B528C6395300E2485E /* 89151-stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "89151-stars.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE73290028C63696002B7FF9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,7 @@
 		FE7328F828C62E3E002B7FF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FECDA6B528C6395300E2485E /* 89151-stars.json */,
 				FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -203,6 +208,9 @@
 			dependencies = (
 			);
 			name = StarMinds;
+			packageProductDependencies = (
+				FE7328FF28C63696002B7FF9 /* Lottie */,
+			);
 			productName = StarMinds;
 			productReference = FE7328BE28C61E8A002B7FF9 /* StarMinds.app */;
 			productType = "com.apple.product-type.application";
@@ -275,6 +283,9 @@
 				Base,
 			);
 			mainGroup = FE7328B528C61E8A002B7FF9;
+			packageReferences = (
+				FE7328FE28C63696002B7FF9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = FE7328BF28C61E8A002B7FF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7328CE28C61E8B002B7FF9 /* LaunchScreen.storyboard in Resources */,
+				FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */,
 				FE7328CB28C61E8B002B7FF9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +685,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE7328FE28C63696002B7FF9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE7328FF28C63696002B7FF9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE7328FE28C63696002B7FF9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE7328B628C61E8A002B7FF9 /* Project object */;
 }
