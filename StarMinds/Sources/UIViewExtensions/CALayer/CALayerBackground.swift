@@ -10,6 +10,10 @@ import UIKit
 
 extension CALayer {
     public func configureGradientBackground(_ colors:CGColor...) {
+        if let gradient = sublayers?.first as? CAGradientLayer {
+            gradient.colors = colors
+            return
+        }
         let gradient = CAGradientLayer()
         let maxWidth = max(
             self.bounds.size.height,
@@ -21,6 +25,6 @@ extension CALayer {
         )
         gradient.frame = squareFrame
         gradient.colors = colors
-        self.insertSublayer(gradient, at:0)
+        self.addSublayer(gradient)
     }
 }
