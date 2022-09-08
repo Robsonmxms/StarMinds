@@ -83,7 +83,7 @@ extension CatTalksView: ViewCodeConfiguration {
     }
 
     func configureViews() {
-        catImage.image = UIImage(named: "CatBigEyes.png")
+        catImage.image = UIImage(named: "CatSmallEyes.png")
         catImage.contentMode = .scaleAspectFill
         catImage.translatesAutoresizingMaskIntoConstraints = false
 
