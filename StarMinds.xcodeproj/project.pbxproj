@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */; };
 		FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C328C61E8A002B7FF9 /* SceneDelegate.swift */; };
-		FE7328C628C61E8A002B7FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C528C61E8A002B7FF9 /* ViewController.swift */; };
+		FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C528C61E8A002B7FF9 /* ExploreViewController.swift */; };
 		FE7328CB28C61E8B002B7FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */; };
 		FE7328CE28C61E8B002B7FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7328CC28C61E8B002B7FF9 /* LaunchScreen.storyboard */; };
 		FE7328D928C61E8B002B7FF9 /* StarMindsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328D828C61E8B002B7FF9 /* StarMindsTests.swift */; };
 		FE7328E328C61E8B002B7FF9 /* StarMindsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328E228C61E8B002B7FF9 /* StarMindsUITests.swift */; };
 		FE7328E528C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328E428C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift */; };
 		FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328F128C61FE2002B7FF9 /* ViewConfiguration.swift */; };
-		FE7328F628C625CE002B7FF9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328F528C625CE002B7FF9 /* HeaderView.swift */; };
 		FE73290028C63696002B7FF9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FE7328FF28C63696002B7FF9 /* Lottie */; };
+		FE795D3B28C63E8D00469569 /* CALayerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE795D3A28C63E8D00469569 /* CALayerBackground.swift */; };
+		FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE795D3C28C76EC700469569 /* CatTalksView.swift */; };
+		FE795D3F28C780D400469569 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE795D3E28C780D400469569 /* CollectionViewCell.swift */; };
 		FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FECDA6B528C6395300E2485E /* 89151-stars.json */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +44,7 @@
 		FE7328BE28C61E8A002B7FF9 /* StarMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7328C328C61E8A002B7FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE7328C528C61E8A002B7FF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE7328C528C61E8A002B7FF9 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE7328CD28C61E8B002B7FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7328CF28C61E8B002B7FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +54,9 @@
 		FE7328E228C61E8B002B7FF9 /* StarMindsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarMindsUITests.swift; sourceTree = "<group>"; };
 		FE7328E428C61E8B002B7FF9 /* StarMindsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarMindsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE7328F128C61FE2002B7FF9 /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
-		FE7328F528C625CE002B7FF9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FE795D3A28C63E8D00469569 /* CALayerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerBackground.swift; sourceTree = "<group>"; };
+		FE795D3C28C76EC700469569 /* CatTalksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTalksView.swift; sourceTree = "<group>"; };
+		FE795D3E28C780D400469569 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FECDA6B528C6395300E2485E /* 89151-stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "89151-stars.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +159,7 @@
 				FE7328FC28C62EBF002B7FF9 /* ViewControllers */,
 				FE7328FA28C62EA3002B7FF9 /* Models */,
 				FE7328FB28C62EAB002B7FF9 /* Views */,
+				FE795D3828C63DD300469569 /* UIViewExtensions */,
 				FE7328FD28C62ED2002B7FF9 /* Protocols */,
 			);
 			path = Sources;
@@ -170,7 +175,8 @@
 		FE7328FB28C62EAB002B7FF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE7328F528C625CE002B7FF9 /* HeaderView.swift */,
+				FE795D3C28C76EC700469569 /* CatTalksView.swift */,
+				FE795D3E28C780D400469569 /* CollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,7 +184,7 @@
 		FE7328FC28C62EBF002B7FF9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FE7328C528C61E8A002B7FF9 /* ViewController.swift */,
+				FE7328C528C61E8A002B7FF9 /* ExploreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +195,22 @@
 				FE7328F128C61FE2002B7FF9 /* ViewConfiguration.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FE795D3828C63DD300469569 /* UIViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE795D3928C63E6500469569 /* CALayer */,
+			);
+			path = UIViewExtensions;
+			sourceTree = "<group>";
+		};
+		FE795D3928C63E6500469569 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE795D3A28C63E8D00469569 /* CALayerBackground.swift */,
+			);
+			path = CALayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,9 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7328F628C625CE002B7FF9 /* HeaderView.swift in Sources */,
-				FE7328C628C61E8A002B7FF9 /* ViewController.swift in Sources */,
+				FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */,
+				FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */,
 				FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */,
+				FE795D3F28C780D400469569 /* CollectionViewCell.swift in Sources */,
+				FE795D3B28C63E8D00469569 /* CALayerBackground.swift in Sources */,
 				FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */,
 				FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */,
 			);
