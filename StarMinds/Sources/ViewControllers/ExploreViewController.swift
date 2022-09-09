@@ -19,7 +19,7 @@ class ExploreViewController: UIViewController {
         collectionViewLayout.scrollDirection = .horizontal
         collectionViewLayout.estimatedItemSize = CGSize(
             width: UIScreen.main.bounds.width * 0.7,
-            height: UIScreen.main.bounds.height * 0.52
+            height: UIScreen.main.bounds.height * 0.6
         )
         return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
     }()
@@ -73,7 +73,7 @@ extension ExploreViewController: ViewCodeConfiguration {
             ),
             collectionView.centerYAnchor.constraint(
                 equalTo: view.centerYAnchor,
-                constant: -20
+                constant: -30
             ),
             collectionView.widthAnchor.constraint(
                 equalTo: view.widthAnchor,
@@ -81,7 +81,7 @@ extension ExploreViewController: ViewCodeConfiguration {
             ),
             collectionView.heightAnchor.constraint(
                 equalTo: view.heightAnchor,
-                multiplier: 0.53
+                multiplier: 0.6
             ),
             catTalksView.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor
@@ -106,6 +106,7 @@ extension ExploreViewController: ViewCodeConfiguration {
         animationView.play()
 
         collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -121,7 +122,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 8
+        return stars.count
     }
 
     func collectionView(
@@ -135,8 +136,25 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             ) as? CollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting")
         }
-
+        let starModel = stars[indexPath.row]
+        cell.configure(with: starModel)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tapOnView = UITapGestureRecognizer(
+            target: self,
+            action: #selector(navigation)
+        )
+        tapOnView.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapOnView)
+    }
+
+    @objc func navigation(myGesture: UITapGestureRecognizer? = nil) {
+        let rootViewcontroller = AboutStarViewController()
+        let viewController = UINavigationController(rootViewController: rootViewcontroller)
+        viewController.modalPresentationStyle = .overFullScreen
+        present(viewController, animated: true, completion: nil)
     }
 
 }
