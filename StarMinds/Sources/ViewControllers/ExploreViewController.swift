@@ -81,7 +81,7 @@ extension ExploreViewController: ViewCodeConfiguration {
             ),
             collectionView.heightAnchor.constraint(
                 equalTo: view.heightAnchor,
-                multiplier: 0.6
+                multiplier: 0.75
             ),
             catTalksView.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor
