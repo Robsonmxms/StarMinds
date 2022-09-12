@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */; };
 		FE5F9ABE28CB871B00B79303 /* StarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABD28CB871B00B79303 /* StarModel.swift */; };
+		FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABF28CF546F00B79303 /* UIImage.swift */; };
 		FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */; };
 		FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C328C61E8A002B7FF9 /* SceneDelegate.swift */; };
 		FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C528C61E8A002B7FF9 /* ExploreViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStarViewController.swift; sourceTree = "<group>"; };
 		FE5F9ABD28CB871B00B79303 /* StarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarModel.swift; sourceTree = "<group>"; };
+		FE5F9ABF28CF546F00B79303 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FE7328BE28C61E8A002B7FF9 /* StarMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE7328C328C61E8A002B7FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				FE795D3928C63E6500469569 /* CALayer */,
+				FE5F9ABF28CF546F00B79303 /* UIImage.swift */,
 			);
 			path = UIViewExtensions;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5F9ABE28CB871B00B79303 /* StarModel.swift in Sources */,
+				FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */,
 				FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */,
 				FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */,
 				FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */,
