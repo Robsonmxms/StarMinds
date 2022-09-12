@@ -1,0 +1,73 @@
+{
+  "stars": [
+    {
+      "id": 0,
+      "info": {
+          "id": 0,
+          "name": "Estrela de Nêutrons",
+          "description": "Tudo tem um fim e isso também acontece com as estrelas. Estrelas de nêutrons são um dos possíveis fins das estrelas. Isso acontece quando elas não tem o peso suficiente para ser um Buraco Negro. As estrelas de nêutrons são pequenininhas, mas bem quentes e pesadonas. Nossa, elas são tão pesadas, mais tão pesadas, que podem ter entre o dobro e o triplo do peso do Sol. "
+      },
+      "image": "EstrelaNeutrons.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 1,
+      "info": {
+          "id": 1,
+          "name": "Anã Branca",
+          "description": "As Anãs Brancas são muito comuns, mas não dá para ver direitinho porque elas têm pouca luz. É claro que essas estrelas tem outras curiosidades! Sabia que se chamam de Anãs Brancas porquê estrelas com a temperatura muito quente na parte de fora são brancas. É daí que nasceu seu nome. Mas não é só isso. Elas tem um peso parecido com a do Sol e é um pouquinho maior do que o da Terra. Ah! Outra coisa incrível sobre os pesos das Anãs Brancas é que as que pesam mais tem tamanhos menores."
+      },
+      "image": "AnaBranca.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 2,
+      "info": {
+          "id": 2,
+          "name": "Estrela Variável",
+          "description": "Tudo na vida se modifica e isso também vale para as estrelas. As Estrelas variáveis são estrelas que o brilho varia com o tempo. Mas porquê isso acontece? Existem dois motivos que fazem a estrela mudar. Um dos motivos não é culpa da estrela, mas algo que pode acontecer fora dela e que faz seu brilho mudar, como quando um planeta fica na sua frente e atrapalha seu brilho. O outro motivo é a própria característica da estrela, que é culpada por sua mudança de brilho, como quando ela aumenta e diminui de tamanho as vezes."
+      },
+      "image": "EstrelaVariavel.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 3,
+      "info": {
+          "id": 3,
+          "name": "Anã Amarela",
+          "description": "Essas estrelas são bem famosas, vemos uma delas todos os dias, mas conhecemos ela mais por Sol. Sim, o Sol é uma anã amarela ou estrela G, outra forma de chamar essa estrela. Mas o que você não imagina é que essas estrelas não são exatamente amarelas. Na verdade, elas variam em cor do branco para tipos com mais luminosidades como o Sol. Mas porquê ele parece amarela? Por causa da atmosfera, ela faz com que essas estrelas tenham a aparência da cor amarelada, alaranjada ou avermelhada."
+      },
+      "image": "AnaAmarela.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 4,
+      "info": {
+          "id": 4,
+          "name": "Anã Marrom",
+          "description": "Existem muitos mistérios sobre as Anãs Marrons e um deles é que ela é uma estrela fracassada. E qual o motivo disso? Porque ela pesa mais que um planeta, mas pesa menos que uma estrela comum. Ah, não fique confuso, ela realmente parece com um planeta gigante. Essa é outra característica dessa “estrela”. Outro mistério sobre ela é que seu nome é Anã Marrom, mas sua verdadeira cor é laranja avermelhada e tem pouquinha luz."
+      },
+      "image": "AnaMarrom.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 5,
+      "info": {
+          "id": 5,
+          "name": "Gigante Vermelha",
+          "description": "As gigantes vermelhas são estrelas que chegaram ao fim de sua fase principal de vida. Essas estrelas acabam perdendo seu combustível, fazendo com que seu tamanho aumente muito e esfriem bastante, parecendo avermelhadas e até mesmo alaranjadas. Ah! Assim que esse combustível acaba, ela acaba morrendo e explode em um evento que se chama SuperNova, mas ela pode virar um buraco negro ou uma estrela de nêutrons, dependendo de quanto ela pesa. E é assim que nascem as Gigantes Vermelhas."
+      },
+      "image": "GiganteVermelha.png",
+      "voxel": "voxel"
+    },
+    {
+      "id": 6,
+      "info": {
+          "id": 6,
+          "name": "Supergigante Azul",
+          "description": "Algumas estrelas são muito raras, como as Supergigantes Azuis. Por causa de seu enorme peso, elas tem uma vida bem curta, por isso são raras. As estrelas azuis são tão impressionantes, que elas são as estrelas mais brilhantes e com mais energia do universo. Mas porquê ela tem essa nome? Bem, elas são tão grandes, que chegam a ser maiores do que o Sol. E sim, elas tem mesmo uma cor azulada."
+      },
+      "image": "SupergiganteAzul.png",
+      "voxel": "voxel"}
+  ]
+}

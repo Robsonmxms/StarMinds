@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE559C6728CF9F4000FAA814 /* Stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FEC6052428CF70FF0097814F /* Stars.json */; };
 		FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */; };
-		FE5F9ABE28CB871B00B79303 /* StarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABD28CB871B00B79303 /* StarModel.swift */; };
+		FE5F9ABE28CB871B00B79303 /* StarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABD28CB871B00B79303 /* StarsModel.swift */; };
 		FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABF28CF546F00B79303 /* UIImage.swift */; };
 		FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */; };
 		FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7328C328C61E8A002B7FF9 /* SceneDelegate.swift */; };
@@ -45,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStarViewController.swift; sourceTree = "<group>"; };
-		FE5F9ABD28CB871B00B79303 /* StarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarModel.swift; sourceTree = "<group>"; };
+		FE5F9ABD28CB871B00B79303 /* StarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsModel.swift; sourceTree = "<group>"; };
 		FE5F9ABF28CF546F00B79303 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FE7328BE28C61E8A002B7FF9 /* StarMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7328C128C61E8A002B7FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		FE795D3A28C63E8D00469569 /* CALayerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerBackground.swift; sourceTree = "<group>"; };
 		FE795D3C28C76EC700469569 /* CatTalksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTalksView.swift; sourceTree = "<group>"; };
 		FE795D3E28C780D400469569 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		FEC6052428CF70FF0097814F /* Stars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stars.json; sourceTree = "<group>"; };
 		FECDA6B528C6395300E2485E /* 89151-stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "89151-stars.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 			children = (
 				FECDA6B528C6395300E2485E /* 89151-stars.json */,
 				FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */,
+				FEC6052428CF70FF0097814F /* Stars.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,7 +177,7 @@
 		FE7328FA28C62EA3002B7FF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE5F9ABD28CB871B00B79303 /* StarModel.swift */,
+				FE5F9ABD28CB871B00B79303 /* StarsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE559C6728CF9F4000FAA814 /* Stars.json in Resources */,
 				FE7328CE28C61E8B002B7FF9 /* LaunchScreen.storyboard in Resources */,
 				FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */,
 				FE7328CB28C61E8B002B7FF9 /* Assets.xcassets in Resources */,
@@ -380,7 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5F9ABE28CB871B00B79303 /* StarModel.swift in Sources */,
+				FE5F9ABE28CB871B00B79303 /* StarsModel.swift in Sources */,
 				FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */,
 				FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */,
 				FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */,

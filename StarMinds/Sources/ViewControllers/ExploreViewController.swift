@@ -10,6 +10,8 @@ import Lottie
 
 class ExploreViewController: UIViewController {
 
+    private let starModel = StarModel.loadJson()
+
     private var animationView: AnimationView = .init()
 
     private var catTalksView: CatTalksView = CatTalksView()
@@ -122,7 +124,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return stars.count
+        return starModel?.count ?? 0
     }
 
     func collectionView(
@@ -136,8 +138,9 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
             ) as? CollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting")
         }
-        let starModel = stars[indexPath.row]
-        cell.configure(with: starModel)
+        let star = starModel![indexPath.row]
+        cell.configure(with: star)
+
         return cell
     }
 
