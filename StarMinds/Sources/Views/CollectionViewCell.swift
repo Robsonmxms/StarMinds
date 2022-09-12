@@ -102,15 +102,15 @@ extension CollectionViewCell: ViewCodeConfiguration {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    func configure(with starModel: StarModel) {
-        guard let uiImage = UIImage(named: starModel.image) else {
+    func configure(with star: Star) {
+        guard let uiImage = UIImage(named: star.image) else {
             fatalError("Could not load image")
         }
-        let size: CGSize = StarModel.getSize(starModel.name)
+        let size: CGSize = StarModel.getSize(star.info.name)
         starImage.image = uiImage.resizeImage(
             size
         )
-        titleLabel.text = starModel.name.rawValue
-        descriptionLabel.text = starModel.description
+        titleLabel.text = star.info.name.rawValue
+        descriptionLabel.text = star.info.description
     }
 }
