@@ -57,13 +57,14 @@ extension CollectionViewCell: ViewCodeConfiguration {
             ),
             starImage.centerYAnchor.constraint(
                 equalTo: card.topAnchor,
-                constant: 55
+                constant: 20
             ),
             stack.centerXAnchor.constraint(
                 equalTo: card.centerXAnchor
             ),
             stack.topAnchor.constraint(
-                equalTo: starImage.bottomAnchor
+                equalTo: card.centerYAnchor,
+                constant: -30
             ),
             stack.widthAnchor.constraint(
                 equalToConstant: UIScreen.main.bounds.width * 0.7 * 0.85
@@ -105,10 +106,11 @@ extension CollectionViewCell: ViewCodeConfiguration {
         guard let uiImage = UIImage(named: starModel.image) else {
             fatalError("Could not load image")
         }
+        let size: CGSize = StarModel.getSize(starModel.name)
         starImage.image = uiImage.resizeImage(
-            CGSize(width: 300, height: 300)
+            size
         )
-        titleLabel.text = starModel.name
+        titleLabel.text = starModel.name.rawValue
         descriptionLabel.text = starModel.description
     }
 }
