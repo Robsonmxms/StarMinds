@@ -30,7 +30,7 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         setBackgroundColor()
         applyViewCode()
-
+        view.addParallax(100)
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
