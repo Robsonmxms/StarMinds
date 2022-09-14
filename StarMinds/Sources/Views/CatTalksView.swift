@@ -65,7 +65,10 @@ extension CatTalksView: ViewCodeConfiguration {
         catImage.translatesAutoresizingMaskIntoConstraints = false
 
         catLabel.text = "Olhe! há estrelas aqui."
-        catLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        catLabel.font = UIFont.systemFont(
+            ofSize: ScreenSize.width*0.04,
+            weight: .bold
+        )
         catLabel.textColor = .black
         catLabel.numberOfLines = 3
         catLabel.lineBreakMode = .byWordWrapping
@@ -76,11 +79,11 @@ extension CatTalksView: ViewCodeConfiguration {
     func activeLabelIfIsTalking() {
             catLabel.centerXAnchor.constraint(
                 equalTo: catImage.centerXAnchor,
-                constant: 35
+                constant: ScreenSize.width*0.09
             ).isActive = true
             catLabel.centerYAnchor.constraint(
                 equalTo: catImage.centerYAnchor,
-                constant: -45
+                constant: -ScreenSize.height*0.055
             ).isActive = true
             catLabel.widthAnchor.constraint(
                 equalTo: catImage.widthAnchor,

@@ -33,20 +33,27 @@ struct StarModel: Codable {
     static func getSize(_ name: Name) -> CGSize {
         switch name {
         case .neutron:
-            return CGSize(width: 100,height: 100)
+            return getCGSize(0.26)
         case .whiteDwarf:
-            return CGSize(width: 150,height: 150)
+            return getCGSize(0.38)
         case .variable:
-            return CGSize(width: 150,height: 150)
+            return getCGSize(0.38)
         case .brownDwarf:
-            return CGSize(width: 180,height: 180)
+            return getCGSize(0.46)
         case .yellowDwarf:
-            return CGSize(width: 200,height: 200)
+            return getCGSize(0.51)
         case .redGiant:
-            return CGSize(width: 300,height: 300)
+            return getCGSize(0.77)
         case .blueSupergiant:
-            return CGSize(width: 370,height: 370)
+            return getCGSize(0.94)
         }
+    }
+
+    private static func getCGSize(_ value: Double) -> CGSize {
+        return CGSize(
+            width: ScreenSize.width*value,
+            height: ScreenSize.width*value
+        )
     }
 }
 
