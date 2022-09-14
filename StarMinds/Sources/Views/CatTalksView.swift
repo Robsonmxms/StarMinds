@@ -9,14 +9,19 @@ import UIKit
 
 class CatTalksView: UIView {
 
+    private var isTalking = true
     private var catImage = UIImageView()
-    private var baloonImage = UIImageView()
     private var catLabel = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         applyViewCode()
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isTalking.toggle()
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -26,19 +31,17 @@ class CatTalksView: UIView {
 extension CatTalksView: ViewCodeConfiguration {
     func buildHierarchy() {
         self.addSubview(catImage)
-        self.addSubview(baloonImage)
-        self.addSubview(catLabel)
+        if isTalking {self.addSubview(catLabel)}
+
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
             catImage.leadingAnchor.constraint(
-                equalTo: self.leadingAnchor,
-                constant: -UIScreen.main.bounds.width*0.10
+                equalTo: self.leadingAnchor
             ),
             catImage.bottomAnchor.constraint(
-                equalTo: self.bottomAnchor,
-                constant: 10
+                equalTo: self.bottomAnchor
             ),
             catImage.heightAnchor.constraint(
                 equalTo: self.heightAnchor
@@ -46,58 +49,47 @@ extension CatTalksView: ViewCodeConfiguration {
             catImage.widthAnchor.constraint(
                 equalTo: self.widthAnchor,
                 multiplier: 0.7
-            ),
-            baloonImage.bottomAnchor.constraint(
-                equalTo: catImage.centerYAnchor,
-                constant: 120
-            ),
-            baloonImage.leadingAnchor.constraint(
-                equalTo: catImage.centerXAnchor,
-                constant: -70
-            ),
-            baloonImage.heightAnchor.constraint(
-                equalTo: catImage.heightAnchor,
-                multiplier: 2.5
-            ),
-            baloonImage.widthAnchor.constraint(
-                equalTo: catImage.widthAnchor,
-                multiplier: 1.5
-            ),
-            catLabel.centerXAnchor.constraint(
-                equalTo: baloonImage.centerXAnchor,
-                constant: -12
-            ),
-            catLabel.centerYAnchor.constraint(
-                equalTo: baloonImage.centerYAnchor,
-                constant: -42
-            ),
-            catLabel.widthAnchor.constraint(
-                equalTo: baloonImage.widthAnchor,
-                multiplier: 0.3
-            ),
-            catLabel.heightAnchor.constraint(
-                equalTo: baloonImage.heightAnchor,
-                multiplier: 0.25
             )
         ])
+
+        if isTalking {activeLabelIfIsTalking()}
+
     }
 
     func configureViews() {
-        catImage.image = UIImage(named: "CatSmallEyes.png")
-        catImage.contentMode = .scaleAspectFill
+
+        catImage.image = UIImage(
+            named: isTalking ? "CatSmallEyes.png" : "CatBigEyes.png"
+        )
+        catImage.contentMode = .scaleAspectFit
         catImage.translatesAutoresizingMaskIntoConstraints = false
 
-        baloonImage.image = UIImage(named: "Baloon.png")
-        baloonImage.contentMode = .scaleAspectFill
-        baloonImage.translatesAutoresizingMaskIntoConstraints = false
-
-        catLabel.text = "Olhe! Temos estrelas aqui"
+        catLabel.text = "Olhe! há estrelas aqui."
         catLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         catLabel.textColor = .black
-        catLabel.numberOfLines = 2
+        catLabel.numberOfLines = 3
         catLabel.lineBreakMode = .byWordWrapping
         catLabel.textAlignment = .center
         catLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    func activeLabelIfIsTalking() {
+            catLabel.centerXAnchor.constraint(
+                equalTo: catImage.centerXAnchor,
+                constant: 35
+            ).isActive = true
+            catLabel.centerYAnchor.constraint(
+                equalTo: catImage.centerYAnchor,
+                constant: -45
+            ).isActive = true
+            catLabel.widthAnchor.constraint(
+                equalTo: catImage.widthAnchor,
+                multiplier: 0.34
+            ).isActive = true
+            catLabel.heightAnchor.constraint(
+                equalTo: catImage.heightAnchor,
+                multiplier: 0.4
+            ).isActive = true
     }
 
 }

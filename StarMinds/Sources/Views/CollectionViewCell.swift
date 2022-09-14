@@ -81,6 +81,7 @@ extension CollectionViewCell: ViewCodeConfiguration {
         card.translatesAutoresizingMaskIntoConstraints = false
 
         starImage.contentMode = .scaleAspectFill
+        starImage.addParallax(30)
         starImage.translatesAutoresizingMaskIntoConstraints = false
 
         stack.axis = .vertical
