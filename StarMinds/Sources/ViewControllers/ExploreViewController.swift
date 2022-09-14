@@ -20,8 +20,8 @@ class ExploreViewController: UIViewController {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
         collectionViewLayout.estimatedItemSize = CGSize(
-            width: UIScreen.main.bounds.width * 0.7,
-            height: UIScreen.main.bounds.height * 0.6
+            width: ScreenSize.width * 0.7,
+            height: ScreenSize.height * 0.6
         )
         return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
     }()
@@ -74,7 +74,7 @@ extension ExploreViewController: ViewCodeConfiguration {
             ),
             collectionView.topAnchor.constraint(
                 equalTo: view.topAnchor,
-                constant: 50
+                constant: ScreenSize.height*0.06
             ),
             collectionView.widthAnchor.constraint(
                 equalTo: view.widthAnchor,

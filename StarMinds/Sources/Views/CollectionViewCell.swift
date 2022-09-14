@@ -57,17 +57,17 @@ extension CollectionViewCell: ViewCodeConfiguration {
             ),
             starImage.centerYAnchor.constraint(
                 equalTo: card.topAnchor,
-                constant: 20
+                constant: ScreenSize.width*0.05
             ),
             stack.centerXAnchor.constraint(
                 equalTo: card.centerXAnchor
             ),
             stack.topAnchor.constraint(
                 equalTo: card.centerYAnchor,
-                constant: -30
+                constant: -ScreenSize.height*0.03
             ),
             stack.widthAnchor.constraint(
-                equalToConstant: UIScreen.main.bounds.width * 0.7 * 0.85
+                equalToConstant: ScreenSize.width * 0.7 * 0.85
             )
 
         ])
@@ -77,9 +77,9 @@ extension CollectionViewCell: ViewCodeConfiguration {
     func configureViews() {
         card.backgroundColor = UIColor(named: "CardBackground")
         card.clipsToBounds = true
-        card.layer.cornerRadius = 20
+        card.layer.cornerRadius = ScreenSize.width*0.05
         card.translatesAutoresizingMaskIntoConstraints = false
-
+        
         starImage.contentMode = .scaleAspectFill
         starImage.addParallax(30)
         starImage.translatesAutoresizingMaskIntoConstraints = false
@@ -87,16 +87,22 @@ extension CollectionViewCell: ViewCodeConfiguration {
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.alignment = .center
-        stack.spacing = 30
+        stack.spacing = ScreenSize.height*0.035
         stack.translatesAutoresizingMaskIntoConstraints = false
 
-        titleLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        titleLabel.font = UIFont.systemFont(
+            ofSize: ScreenSize.width*0.08,
+            weight: .bold
+        )
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 2
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        descriptionLabel.font = UIFont.systemFont(ofSize: 22, weight: .medium)
+        descriptionLabel.font = UIFont.systemFont(
+            ofSize: ScreenSize.width*0.056,
+            weight: .medium
+        )
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 3
         descriptionLabel.lineBreakMode = .byTruncatingTail

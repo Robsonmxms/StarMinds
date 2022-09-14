@@ -34,20 +34,20 @@
       "id": 3,
       "info": {
           "id": 3,
-          "name": "Anã Amarela",
-          "description": "Essas estrelas são bem famosas, vemos uma delas todos os dias, mas conhecemos ela mais por Sol. Sim, o Sol é uma anã amarela ou estrela G, outra forma de chamar essa estrela. Mas o que você não imagina é que essas estrelas não são exatamente amarelas. Na verdade, elas variam em cor do branco para tipos com mais luminosidades como o Sol. Mas porquê ele parece amarela? Por causa da atmosfera, ela faz com que essas estrelas tenham a aparência da cor amarelada, alaranjada ou avermelhada."
+          "name": "Anã Marrom",
+          "description": "Existem muitos mistérios sobre as Anãs Marrons e um deles é que ela é uma estrela fracassada. E qual o motivo disso? Porque ela pesa mais que um planeta, mas pesa menos que uma estrela comum. Ah, não fique confuso, ela realmente parece com um planeta gigante. Essa é outra característica dessa “estrela”. Outro mistério sobre ela é que seu nome é Anã Marrom, mas sua verdadeira cor é laranja avermelhada e tem pouquinha luz."
       },
-      "image": "AnaAmarela.png",
+      "image": "AnaMarrom.png",
       "voxel": "voxel"
     },
     {
       "id": 4,
       "info": {
           "id": 4,
-          "name": "Anã Marrom",
-          "description": "Existem muitos mistérios sobre as Anãs Marrons e um deles é que ela é uma estrela fracassada. E qual o motivo disso? Porque ela pesa mais que um planeta, mas pesa menos que uma estrela comum. Ah, não fique confuso, ela realmente parece com um planeta gigante. Essa é outra característica dessa “estrela”. Outro mistério sobre ela é que seu nome é Anã Marrom, mas sua verdadeira cor é laranja avermelhada e tem pouquinha luz."
+          "name": "Anã Amarela",
+          "description": "Essas estrelas são bem famosas, vemos uma delas todos os dias, mas conhecemos ela mais por Sol. Sim, o Sol é uma anã amarela ou estrela G, outra forma de chamar essa estrela. Mas o que você não imagina é que essas estrelas não são exatamente amarelas. Na verdade, elas variam em cor do branco para tipos com mais luminosidades como o Sol. Mas porquê ele parece amarela? Por causa da atmosfera, ela faz com que essas estrelas tenham a aparência da cor amarelada, alaranjada ou avermelhada."
       },
-      "image": "AnaMarrom.png",
+      "image": "AnaAmarela.png",
       "voxel": "voxel"
     },
     {
