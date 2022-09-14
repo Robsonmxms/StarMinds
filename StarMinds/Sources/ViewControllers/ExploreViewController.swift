@@ -30,7 +30,6 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         setBackgroundColor()
         applyViewCode()
-        view.addParallax(100)
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -73,9 +72,9 @@ extension ExploreViewController: ViewCodeConfiguration {
             collectionView.centerXAnchor.constraint(
                 equalTo: view.centerXAnchor
             ),
-            collectionView.centerYAnchor.constraint(
-                equalTo: view.centerYAnchor,
-                constant: -30
+            collectionView.topAnchor.constraint(
+                equalTo: view.topAnchor,
+                constant: 50
             ),
             collectionView.widthAnchor.constraint(
                 equalTo: view.widthAnchor,
@@ -88,12 +87,11 @@ extension ExploreViewController: ViewCodeConfiguration {
             catTalksView.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor
             ),
+            catTalksView.topAnchor.constraint(
+                equalTo: collectionView.bottomAnchor
+            ),
             catTalksView.bottomAnchor.constraint(
                 equalTo: view.bottomAnchor
-            ),
-            catTalksView.heightAnchor.constraint(
-                equalTo: view.heightAnchor,
-                multiplier: 0.15
             ),
             catTalksView.widthAnchor.constraint(
                 equalTo: view.widthAnchor
