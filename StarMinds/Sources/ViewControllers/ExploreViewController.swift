@@ -143,18 +143,14 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let tapOnView = UITapGestureRecognizer(
-            target: self,
-            action: #selector(navigation)
-        )
-        tapOnView.cancelsTouchesInView = false
-        view.addGestureRecognizer(tapOnView)
+        let star = starModel![indexPath.row]
+        navigation(with: star)
     }
 
-    @objc func navigation(myGesture: UITapGestureRecognizer? = nil) {
-        let rootViewcontroller = AboutStarViewController()
+    func navigation(with star: Star) {
+        let rootViewcontroller = AboutStarViewController(with: star)
         let viewController = UINavigationController(rootViewController: rootViewcontroller)
-        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true, completion: nil)
     }
 

@@ -6,178 +6,95 @@
 //
 
 import UIKit
-import Lottie
+import SceneKit
 
 class AboutStarViewController: UIViewController {
 
-    private var card = UIView()
-
-    private lazy var starImage = UIImageView()
-
+    private var closeButton = UIBarButtonItem()
+    private var star: Star
     private var stack = UIStackView()
-
-    private var animationView: AnimationView = .init()
-
-    private lazy var catImage = UIImageView()
-
-    private lazy var baloonImage = UIImageView()
-
-    private var catLabel = UILabel()
+    private var voxelView: VoxelView
+    private var descriptionLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackgroundColor()
+        self.view.backgroundColor = UIColor(named: "SheetBackground")
         applyViewCode()
-
     }
 
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        updateColors()
+    @objc func close() {
+        self.dismiss(animated: true)
     }
 
-    private func updateColors() {
-        setBackgroundColor()
+    init(with star: Star) {
+        self.star = star
+        self.voxelView = VoxelView(frame: .infinite, star: star)
+        super.init(nibName: nil, bundle: nil)
     }
 
-    private func setBackgroundColor() {
-        view.layer.configureGradientBackground(
-            UIColor(named: "UpGradient")!.cgColor,
-            UIColor(named: "DownGradient")!.cgColor
-        )
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
 
 extension AboutStarViewController: ViewCodeConfiguration {
     func buildHierarchy() {
-        view.addSubview(animationView)
-
-        stack.addSubview(card)
-        stack.addSubview(starImage)
-
+        stack.addArrangedSubview(voxelView)
+        stack.addArrangedSubview(descriptionLabel)
         view.addSubview(stack)
-        view.addSubview(catImage)
-        view.addSubview(baloonImage)
-        view.addSubview(catLabel)
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            animationView.topAnchor.constraint(
-                equalTo: view.topAnchor
+
+            stack.topAnchor.constraint(
+                equalTo: view.topAnchor,
+                constant: ScreenSize.height*0.1
             ),
-            animationView.heightAnchor.constraint(
+            stack.heightAnchor.constraint(
                 equalTo: view.heightAnchor,
                 multiplier: 0.8
             ),
-            animationView.centerXAnchor.constraint(
-                equalTo: view.centerXAnchor
-            ),
-            card.centerXAnchor.constraint(
-                equalTo: view.centerXAnchor
-            ),
-            card.centerYAnchor.constraint(
-                equalTo: view.centerYAnchor
-            ),
-            card.heightAnchor.constraint(
-                equalTo: view.heightAnchor,
-                multiplier: 0.5
-            ),
-            card.widthAnchor.constraint(
+            stack.widthAnchor.constraint(
                 equalTo: view.widthAnchor,
-                multiplier: 0.7
+                multiplier: 0.9
             ),
-            starImage.centerXAnchor.constraint(
-                equalTo: card.centerXAnchor
-            ),
-            starImage.centerYAnchor.constraint(
-                equalTo: card.topAnchor,
-                constant: 40
-            ),
-            starImage.heightAnchor.constraint(
-                equalTo: card.heightAnchor,
-                multiplier: 0.7
-            ),
-            starImage.widthAnchor.constraint(
-                equalTo: card.widthAnchor,
-                multiplier: 0.8
-            ),
-
-            catImage.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor,
-                constant: -60
-            ),
-
-            catImage.bottomAnchor.constraint(
-                equalTo: view.bottomAnchor
-            ),
-            catImage.heightAnchor.constraint(
-                equalTo: view.heightAnchor,
-                multiplier: 0.15
-            ),
-            catImage.widthAnchor.constraint(
-                equalTo: view.widthAnchor,
-                multiplier: 0.7
-            ),
-            baloonImage.bottomAnchor.constraint(
-                equalTo: catImage.centerYAnchor,
-                constant: 120
-            ),
-            baloonImage.leadingAnchor.constraint(
-                equalTo: catImage.centerXAnchor,
-                constant: -70
-            ),
-            baloonImage.heightAnchor.constraint(
-                equalTo: catImage.heightAnchor,
-                multiplier: 2.5
-            ),
-            baloonImage.widthAnchor.constraint(
-                equalTo: catImage.widthAnchor,
-                multiplier: 1.5
-            ),
-            catLabel.centerXAnchor.constraint(
-                equalTo: view.centerXAnchor,
-                constant: 5
-            ),
-            catLabel.centerYAnchor.constraint(
-                equalTo: catImage.centerYAnchor,
-                constant: -110
+            stack.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor
             )
         ])
-
     }
 
     func configureViews() {
-        card.backgroundColor = .red
-        card.clipsToBounds = true
-        card.layer.cornerRadius = 20
-        card.translatesAutoresizingMaskIntoConstraints = false
 
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        animationView.animation = Animation.named("89151-stars")
-        animationView.loopMode = .loop
-        animationView.play()
+        closeButton = UIBarButtonItem(
+            barButtonSystemItem: .close,
+            target: self,
+            action: #selector(close)
+        )
+        navigationItem.rightBarButtonItem = closeButton
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
 
-        starImage.image = UIImage(named: "star3.png")
-        starImage.contentMode = .scaleAspectFill
-        starImage.isUserInteractionEnabled = true
-        starImage.translatesAutoresizingMaskIntoConstraints = false
-
+        stack.axis = .vertical
+        stack.distribution = .equalSpacing
+        stack.alignment = .center
+        stack.spacing = ScreenSize.height*0.03
         stack.translatesAutoresizingMaskIntoConstraints = false
 
-        catImage.image = UIImage(named: "cat.png")
-        catImage.contentMode = .scaleAspectFill
-        catImage.translatesAutoresizingMaskIntoConstraints = false
-
-        baloonImage.image = UIImage(named: "baloon.png")
-        baloonImage.contentMode = .scaleAspectFill
-        baloonImage.translatesAutoresizingMaskIntoConstraints = false
-
-        catLabel.text = "Olhe!"
-        catLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
-        catLabel.textColor = .black
-        catLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.text = star.info.description
+        descriptionLabel.font = UIFont.systemFont(
+            ofSize: ScreenSize.width*0.056,
+            weight: .medium
+        )
+        descriptionLabel.textAlignment = .center
+        descriptionLabel.numberOfLines = .max
+        descriptionLabel.lineBreakMode = .byTruncatingTail
 
     }
+
+}
+
+extension AboutStarViewController: UIGestureRecognizerDelegate {
+
 }
