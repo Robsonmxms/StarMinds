@@ -79,7 +79,7 @@ extension CollectionViewCell: ViewCodeConfiguration {
         card.clipsToBounds = true
         card.layer.cornerRadius = ScreenSize.width*0.05
         card.translatesAutoresizingMaskIntoConstraints = false
-        
+
         starImage.contentMode = .scaleAspectFill
         starImage.addParallax(30)
         starImage.translatesAutoresizingMaskIntoConstraints = false
