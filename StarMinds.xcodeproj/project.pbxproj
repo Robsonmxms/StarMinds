@@ -285,9 +285,8 @@
 		FE7328FB28C62EAB002B7FF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FE795D3C28C76EC700469569 /* CatTalksView.swift */,
-				FE795D3E28C780D400469569 /* CollectionViewCell.swift */,
-				FEE61ADB28D362A200503463 /* VoxelView.swift */,
+				FEF5674C28D4A60B00D1112D /* ExplorerView */,
+				FEF5674D28D4A62500D1112D /* AboutStarView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +433,23 @@
 				FEE61AA928D3571500503463 /* Gigante_Vermelha#fdb332-obj.vox.png */,
 			);
 			path = "Gigante Vermelha";
+			sourceTree = "<group>";
+		};
+		FEF5674C28D4A60B00D1112D /* ExplorerView */ = {
+			isa = PBXGroup;
+			children = (
+				FE795D3C28C76EC700469569 /* CatTalksView.swift */,
+				FE795D3E28C780D400469569 /* CollectionViewCell.swift */,
+			);
+			path = ExplorerView;
+			sourceTree = "<group>";
+		};
+		FEF5674D28D4A62500D1112D /* AboutStarView */ = {
+			isa = PBXGroup;
+			children = (
+				FEE61ADB28D362A200503463 /* VoxelView.swift */,
+			);
+			path = AboutStarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

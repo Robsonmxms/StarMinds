@@ -8,8 +8,8 @@
 import UIKit
 import SceneKit
 
-class AboutStarViewController: UIViewController {
-
+class AboutStarViewController: UITableViewController {
+    private var closeIcon = UIImage()
     private var closeButton = UIBarButtonItem()
     private var star: Star
     private var stack = UIStackView()
@@ -18,12 +18,8 @@ class AboutStarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "SheetBackground")
+        view.backgroundColor = UIColor(named: "CardBackground")
         applyViewCode()
-    }
-
-    @objc func close() {
-        self.dismiss(animated: true)
     }
 
     init(with star: Star) {
@@ -67,13 +63,20 @@ extension AboutStarViewController: ViewCodeConfiguration {
     }
 
     func configureViews() {
+        closeIcon = (UIImage(systemName: "xmark.circle.fill")?
+            .withTintColor(
+                UIColor(named: "AccentColor")!,
+                renderingMode: .alwaysOriginal)
+        )!
 
         closeButton = UIBarButtonItem(
-            barButtonSystemItem: .close,
+            image: closeIcon,
+            style: .done,
             target: self,
             action: #selector(close)
         )
         navigationItem.rightBarButtonItem = closeButton
+        navigationItem.title = star.info.name.rawValue
         navigationController?.interactivePopGestureRecognizer?.delegate = self
 
         stack.axis = .vertical
@@ -91,6 +94,10 @@ extension AboutStarViewController: ViewCodeConfiguration {
         descriptionLabel.numberOfLines = .max
         descriptionLabel.lineBreakMode = .byTruncatingTail
 
+    }
+
+    @objc func close() {
+        self.dismiss(animated: true)
     }
 
 }
