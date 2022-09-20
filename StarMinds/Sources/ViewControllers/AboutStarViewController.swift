@@ -13,7 +13,7 @@ class AboutStarViewController: UITableViewController {
     private var closeButton = UIBarButtonItem()
     private var star: Star
     private var stack = UIStackView()
-    private var voxelView: VoxelView
+    private var voxelView: StarView
     private var descriptionLabel = UILabel()
 
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class AboutStarViewController: UITableViewController {
 
     init(with star: Star) {
         self.star = star
-        self.voxelView = VoxelView(frame: .infinite, star: star)
+        self.voxelView = StarView(star: star)
         super.init(nibName: nil, bundle: nil)
     }
 

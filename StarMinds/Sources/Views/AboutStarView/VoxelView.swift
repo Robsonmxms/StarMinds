@@ -8,9 +8,10 @@
 import UIKit
 import SceneKit
 
-class VoxelView: UIView, SCNPhysicsContactDelegate, SCNSceneRendererDelegate {
+class VoxelView: SCNView {
     private var star: Star?
-    private var voxel = StarView()
+
+//    private var starView = StarView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,9 +29,7 @@ class VoxelView: UIView, SCNPhysicsContactDelegate, SCNSceneRendererDelegate {
 }
 
 extension VoxelView: ViewCodeConfiguration {
-    func buildHierarchy() {
-        self.addSubview(voxel)
-    }
+    func buildHierarchy() {}
     func setupConstraints() {}
     func configureViews() {}
 }
@@ -107,7 +106,7 @@ class StarView: SCNView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init() {
+    init(star: Star) {
         super.init (frame: .zero, options: [:])
 
         let scene = MySet()
@@ -129,7 +128,6 @@ class StarView: SCNView {
 
         ambientLightNode.light!.color = UIColor.white
 
-
         lightNode.position = SCNVector3(x: 10, y: 3, z: 6)
         lightNode.rotation = SCNVector4(x: -0.99604034, y: 0.07114126, z: 0.05331763, w: 1.2901226)
         lightNode.eulerAngles =  SCNVector3(x: -1.2863125, y: 0.106957085, z: 1.4986801e-08)
@@ -143,7 +141,6 @@ class StarView: SCNView {
         scene.rootNode.addChildNode(planetBase)
         scene.rootNode.addChildNode(planetSecondary)
         scene.rootNode.addChildNode(planetLight)
-
 
         scene.rootNode.position = SCNVector3Make(0, 9, -10)
         scene.rootNode.eulerAngles = SCNVector3(110.toRadian(), 180.toRadian(),0.toRadian())
@@ -166,19 +163,16 @@ class StarView: SCNView {
 
         cameraNode.camera = camera
 
-
         cameraNode.position = SCNVector3(x: -0.18155792, y: 4.0028123, z: 0.537899)
         cameraNode.rotation = SCNVector4(x: -0.99604034, y: 0.05200568, z: 0.009337218, w: 0.3557861)
         cameraNode.eulerAngles = SCNVector3(x: -0.35529917, y: -0.018700039, z: 4.657428e-10)
-
 
         self.pointOfView = cameraNode
     }
 }
 
-extension Int{
-    func toRadian() -> Float{
+extension Int {
+    func toRadian() -> Float {
         return Float(self) * Float.pi/180
     }
 }
-
