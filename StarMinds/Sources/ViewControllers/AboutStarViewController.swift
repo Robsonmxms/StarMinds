@@ -48,9 +48,8 @@ extension AboutStarViewController: ViewCodeConfiguration {
                 equalTo: view.topAnchor,
                 constant: ScreenSize.height*0.1
             ),
-            stack.heightAnchor.constraint(
-                equalTo: view.heightAnchor,
-                multiplier: 0.8
+            stack.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             stack.widthAnchor.constraint(
                 equalTo: view.widthAnchor,
