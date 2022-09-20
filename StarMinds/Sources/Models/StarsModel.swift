@@ -61,7 +61,8 @@ struct StarModel: Codable {
 struct Star: Codable {
     let id: Int
     let info: Info
-    let image, voxel: String
+    let image: Image
+    let voxel: String
 
     private enum CodingKeys: String, CodingKey {
         case id, info
@@ -79,6 +80,18 @@ struct Info: Codable {
     private enum CodingKeys: String, CodingKey {
         case id, name
         case description
+    }
+}
+
+// MARK: - Image
+struct Image: Codable {
+    let id: Int
+    let path: String
+    let voiceDescription: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case path, voiceDescription
     }
 }
 
