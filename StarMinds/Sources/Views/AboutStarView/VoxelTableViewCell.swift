@@ -8,39 +8,77 @@
 import UIKit
 import SceneKit
 
-class VoxelView: SCNView {
-    private var star: Star?
+class VoxelTableViewCell: UITableViewCell {
 
-//    private var starView = StarView()
+    let star = Star(
+        id: 0,
+        info: Info(
+            id: 0,
+            name: Name.neutron,
+            description: ""
+        ),
+        image: Image(
+            id: 0,
+            path: "",
+            voiceDescription: ""
+        ),
+        voxel: ""
+    )
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var starView = StarView()
+
+    override init(
+        style: UITableViewCell.CellStyle,
+        reuseIdentifier: String?
+    ) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
+        self.backgroundColor = .clear
         applyViewCode()
-    }
-
-    convenience init(frame: CGRect, star: Star) {
-        self.init(frame: frame)
-        self.star = star
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func configure(with star: Star) {
+        starView.configure(with: star)
+    }
+
 }
 
-extension VoxelView: ViewCodeConfiguration {
-    func buildHierarchy() {}
-    func setupConstraints() {}
-    func configureViews() {}
+extension VoxelTableViewCell: ViewCodeConfiguration {
+    func buildHierarchy() {
+        contentView.addSubview(starView)
+    }
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            starView.topAnchor.constraint(
+                equalTo: contentView.topAnchor
+            ),
+            starView.heightAnchor.constraint(
+                equalToConstant: 0.4*ScreenSize.height
+            ),
+            starView.widthAnchor.constraint(
+                equalTo: contentView.widthAnchor
+            ),
+            starView.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor
+            )
+        ])
+    }
+    
+    func configureViews() {
+        starView.translatesAutoresizingMaskIntoConstraints = false
+    }
 }
 
 class MySet: SCNScene, SCNSceneRendererDelegate {
 
 }
 
-class StarView: SCNView {
+class StarView: SCNView{
 
-    // Pesquisar o que é Lazy
     lazy var planetBase : SCNNode = {
 
         let material = SCNMaterial()
@@ -102,12 +140,15 @@ class StarView: SCNView {
 
     }()
 
+    init() {
+        super.init (frame: .zero, options: [:])
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(star: Star) {
-        super.init (frame: .zero, options: [:])
+    func configure(with star: Star) {
 
         let scene = MySet()
 
@@ -142,14 +183,14 @@ class StarView: SCNView {
         scene.rootNode.addChildNode(planetSecondary)
         scene.rootNode.addChildNode(planetLight)
 
-        scene.rootNode.position = SCNVector3Make(0, 9, -10)
+        scene.rootNode.position = SCNVector3Make(0, 5, -10)
         scene.rootNode.eulerAngles = SCNVector3(110.toRadian(), 180.toRadian(),0.toRadian())
 
         self.scene = scene
 
         self.showsStatistics = false
         self.allowsCameraControl = true
-        self.backgroundColor = .white
+        self.backgroundColor = .clear
 
         self.translatesAutoresizingMaskIntoConstraints = false
 
@@ -159,7 +200,8 @@ class StarView: SCNView {
         let cameraNode = SCNNode()
         let camera = SCNCamera()// the camera
         camera.usesOrthographicProjection = true
-        camera.orthographicScale = 7
+        camera.orthographicScale = 3
+
 
         cameraNode.camera = camera
 

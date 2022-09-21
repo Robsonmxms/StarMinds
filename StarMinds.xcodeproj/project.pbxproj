@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		59AA906928D0B73E00504FB8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA906828D0B73E00504FB8 /* UIView.swift */; };
+		D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */; };
+		D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */; };
 		FE1D977B28D20BEC003DBFF4 /* ConstantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */; };
 		FE559C6728CF9F4000FAA814 /* Stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FEC6052428CF70FF0097814F /* Stars.json */; };
 		FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */; };
@@ -48,7 +50,7 @@
 		FEE1EBB528DA06FB00F5C757 /* Gigante_Azul#5eb2f5.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */; };
 		FEE1EBB628DA06FB00F5C757 /* Gigante_Vermelha#ea3a28.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */; };
 		FEE1EBB728DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA228DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae */; };
-		FEE61ADC28D362A200503463 /* VoxelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE61ADB28D362A200503463 /* VoxelView.swift */; };
+		FEE61ADC28D362A200503463 /* VoxelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		59AA906828D0B73E00504FB8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
+		D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsModel.swift; sourceTree = "<group>"; };
 		FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStarViewController.swift; sourceTree = "<group>"; };
 		FE5F9ABD28CB871B00B79303 /* StarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsModel.swift; sourceTree = "<group>"; };
@@ -113,7 +117,7 @@
 		FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#5eb2f5.dae"; sourceTree = "<group>"; };
 		FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#ea3a28.dae"; sourceTree = "<group>"; };
 		FEE1EBA228DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#f1751e.dae"; sourceTree = "<group>"; };
-		FEE61ADB28D362A200503463 /* VoxelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxelView.swift; sourceTree = "<group>"; };
+		FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxelTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 			children = (
 				FE5F9ABD28CB871B00B79303 /* StarsModel.swift */,
 				FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */,
+				D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,7 +313,8 @@
 		FEF5674D28D4A62500D1112D /* AboutStarView */ = {
 			isa = PBXGroup;
 			children = (
-				FEE61ADB28D362A200503463 /* VoxelView.swift */,
+				FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */,
+				D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */,
 			);
 			path = AboutStarView;
 			sourceTree = "<group>";
@@ -494,15 +500,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5F9ABE28CB871B00B79303 /* StarsModel.swift in Sources */,
+				D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */,
 				FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */,
 				FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */,
 				FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */,
 				59AA906928D0B73E00504FB8 /* UIView.swift in Sources */,
 				FE1D977B28D20BEC003DBFF4 /* ConstantsModel.swift in Sources */,
-				FEE61ADC28D362A200503463 /* VoxelView.swift in Sources */,
+				FEE61ADC28D362A200503463 /* VoxelTableViewCell.swift in Sources */,
 				FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */,
 				FE795D3F28C780D400469569 /* CollectionViewCell.swift in Sources */,
 				FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */,
+				D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */,
 				FE795D3B28C63E8D00469569 /* CALayer.swift in Sources */,
 				FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */,
 				FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */,
