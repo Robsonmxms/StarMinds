@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59AA906928D0B73E00504FB8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA906828D0B73E00504FB8 /* UIView.swift */; };
+		D699598E28DCA41300DBC595 /* Ana_Amarela#fae594.dae in Resources */ = {isa = PBXBuildFile; fileRef = D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */; };
 		D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */; };
 		D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */; };
 		FE1D977B28D20BEC003DBFF4 /* ConstantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */; };
@@ -45,7 +46,6 @@
 		FEE1EBB028DA06FB00F5C757 /* Estrela_Neutrons#959dba.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9B28DA06F900F5C757 /* Estrela_Neutrons#959dba.dae */; };
 		FEE1EBB128DA06FB00F5C757 /* Gigante_Azul#4c94d3.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9C28DA06F900F5C757 /* Gigante_Azul#4c94d3.dae */; };
 		FEE1EBB228DA06FB00F5C757 /* Ana_Branca#e4f5f7.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */; };
-		FEE1EBB328DA06FB00F5C757 /* Ana_Amarela#fae594-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9E28DA06FA00F5C757 /* Ana_Amarela#fae594-obj.dae */; };
 		FEE1EBB428DA06FB00F5C757 /* Estrela_Neutrons#a7c3cb.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9F28DA06FA00F5C757 /* Estrela_Neutrons#a7c3cb.dae */; };
 		FEE1EBB528DA06FB00F5C757 /* Gigante_Azul#5eb2f5.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */; };
 		FEE1EBB628DA06FB00F5C757 /* Gigante_Vermelha#ea3a28.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */; };
@@ -72,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		59AA906828D0B73E00504FB8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#fae594.dae"; sourceTree = "<group>"; };
 		D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
 		D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsModel.swift; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		FEE1EB9B28DA06F900F5C757 /* Estrela_Neutrons#959dba.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#959dba.dae"; sourceTree = "<group>"; };
 		FEE1EB9C28DA06F900F5C757 /* Gigante_Azul#4c94d3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#4c94d3.dae"; sourceTree = "<group>"; };
 		FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#e4f5f7.dae"; sourceTree = "<group>"; };
-		FEE1EB9E28DA06FA00F5C757 /* Ana_Amarela#fae594-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#fae594-obj.dae"; sourceTree = "<group>"; };
 		FEE1EB9F28DA06FA00F5C757 /* Estrela_Neutrons#a7c3cb.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#a7c3cb.dae"; sourceTree = "<group>"; };
 		FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#5eb2f5.dae"; sourceTree = "<group>"; };
 		FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#ea3a28.dae"; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 			children = (
 				FEE1EB8E28DA06F700F5C757 /* Ana_Amarela#f4c06a.dae */,
 				FEE1EB9828DA06F900F5C757 /* Ana_Amarela#f9e074.dae */,
-				FEE1EB9E28DA06FA00F5C757 /* Ana_Amarela#fae594-obj.dae */,
+				D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */,
 				FEE1EB9728DA06F900F5C757 /* Ana_Branca#c8edfd.dae */,
 				FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */,
 				FEE1EB9428DA06F800F5C757 /* Ana_Branca#ebf8f9.dae */,
@@ -446,7 +446,7 @@
 				FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */,
 				FEE1EBB228DA06FB00F5C757 /* Ana_Branca#e4f5f7.dae in Resources */,
 				FEE1EBAD28DA06FB00F5C757 /* Ana_Amarela#f9e074.dae in Resources */,
-				FEE1EBB328DA06FB00F5C757 /* Ana_Amarela#fae594-obj.dae in Resources */,
+				D699598E28DCA41300DBC595 /* Ana_Amarela#fae594.dae in Resources */,
 				FEE1EBB028DA06FB00F5C757 /* Estrela_Neutrons#959dba.dae in Resources */,
 				FEE1EBAA28DA06FB00F5C757 /* Gigante_Vermelha#fdb332.dae in Resources */,
 				FE7328CB28C61E8B002B7FF9 /* Assets.xcassets in Resources */,

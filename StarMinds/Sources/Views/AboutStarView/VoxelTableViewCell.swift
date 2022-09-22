@@ -10,22 +10,8 @@ import SceneKit
 
 class VoxelTableViewCell: UITableViewCell {
 
-    let star = Star(
-        id: 0,
-        info: Info(
-            id: 0,
-            name: Name.neutron,
-            description: ""
-        ),
-        image: Image(
-            id: 0,
-            path: "",
-            voiceDescription: ""
-        ),
-        voxel: ""
-    )
-
     var starView = StarView()
+    private var star: Star = StarModel.mockStar()
 
     override init(
         style: UITableViewCell.CellStyle,
@@ -79,66 +65,6 @@ class MySet: SCNScene, SCNSceneRendererDelegate {
 
 class StarView: SCNView{
 
-    lazy var planetBase : SCNNode = {
-
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor(red: 130/255, green: 25/255, blue: 14/255, alpha: 1)
-        material.emission.contents = UIColor(red: 130/255, green: 25/255, blue: 14/255, alpha: 1)
-        material.roughness.contents = UIColor(red: 130/255, green: 25/255, blue: 14/255, alpha: 1)
-        material.emission.intensity = 0.5
-
-
-
-        let scene = SCNScene(named: "Anas_Marrons#82190e.dae")!
-        let node = scene.rootNode.childNodes[0]
-
-        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.9999 )
-        node.position = SCNVector3(x: 0, y: 0, z: 3)
-
-        node.geometry?.firstMaterial = material
-
-
-
-        return node
-
-    }()
-
-    lazy var planetSecondary : SCNNode = {
-
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor(red: 77/255, green: 8/255, blue: 5/255, alpha: 1)
-        material.emission.contents =  UIColor(red: 77/255, green: 8/255, blue: 5/255, alpha: 1)
-
-        let scene = SCNScene(named: "Anas_Marrons#4d0805.dae")!
-        let node = scene.rootNode.childNodes[0]
-
-        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.999 )
-        node.position = SCNVector3(x: 0, y: 0, z: 3)
-
-        node.geometry?.firstMaterial = material
-
-        return node
-
-    }()
-
-    lazy var planetLight : SCNNode = {
-
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor(red: 183/255, green: 55/255, blue: 19/255, alpha: 1)
-        material.lightingModel = .phong
-        material.transparency = 0.3
-
-        let scene = SCNScene(named: "Anas_Marrons#b73713.dae")!
-        let node = scene.rootNode.childNodes[0]
-
-        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.999 )
-        node.position = SCNVector3(x: 0, y: 0, z: 3)
-
-        node.geometry?.firstMaterial = material
-
-        return node
-
-    }()
 
     init() {
         super.init (frame: .zero, options: [:])
@@ -177,11 +103,12 @@ class StarView: SCNView{
         ambientLightNode.rotation = SCNVector4(x: -0.99604034, y: 0.07114126, z: 0.05331763, w: 1.2901226)
         ambientLightNode.eulerAngles =  SCNVector3(x: -1.2863125, y: 0.106957085, z: 1.4986801e-08)
 
+
         scene.rootNode.addChildNode(ambientLightNode)
         scene.rootNode.addChildNode(lightNode)
-        scene.rootNode.addChildNode(planetBase)
-        scene.rootNode.addChildNode(planetSecondary)
-        scene.rootNode.addChildNode(planetLight)
+        scene.rootNode.addChildNode(buildFirstNode(star.voxNode[0]))
+        scene.rootNode.addChildNode(buildSecondNode(star.voxNode[1]))
+        scene.rootNode.addChildNode(buildThirdNode(star.voxNode[2]))
 
         scene.rootNode.position = SCNVector3Make(0, 5, -10)
         scene.rootNode.eulerAngles = SCNVector3(110.toRadian(), 180.toRadian(),0.toRadian())
@@ -211,6 +138,77 @@ class StarView: SCNView{
 
         self.pointOfView = cameraNode
     }
+
+    private func buildFirstNode(_ voxel: VoxNode) -> SCNNode {
+
+        let material = SCNMaterial()
+        material.diffuse.contents = buildColor(color: voxel.color)
+        material.emission.contents = buildColor(color: voxel.color)
+        material.roughness.contents = buildColor(color: voxel.color)
+        material.emission.intensity = 0.5
+
+
+
+        let scene = SCNScene(named: voxel.scene)!
+        let node = scene.rootNode.childNodes[0]
+
+        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.9999 )
+        node.position = SCNVector3(x: 0, y: 0, z: 3)
+
+        node.geometry?.firstMaterial = material
+
+
+
+        return node
+
+    }
+
+    private func buildSecondNode(_ voxel: VoxNode) -> SCNNode {
+
+        let material = SCNMaterial()
+        material.diffuse.contents = buildColor(color: voxel.color)
+        material.emission.contents =  buildColor(color: voxel.color)
+
+        let scene = SCNScene(named: voxel.scene)!
+        let node = scene.rootNode.childNodes[0]
+
+        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.999 )
+        node.position = SCNVector3(x: 0, y: 0, z: 3)
+
+        node.geometry?.firstMaterial = material
+
+        return node
+
+    }
+
+    private func buildThirdNode(_ voxel: VoxNode) -> SCNNode {
+
+        let material = SCNMaterial()
+        material.diffuse.contents = buildColor(color: voxel.color)
+        material.lightingModel = .phong
+        material.transparency = 0.3
+
+        let scene = SCNScene(named: voxel.scene)!
+        let node = scene.rootNode.childNodes[0]
+
+        node.scale = SCNVector3(x: 0.999, y: 0.999, z: 0.999 )
+        node.position = SCNVector3(x: 0, y: 0, z: 3)
+
+        node.geometry?.firstMaterial = material
+
+        return node
+
+    }
+
+    private func buildColor(color: StarColor) -> UIColor {
+        return UIColor(
+            red: color.red/255,
+            green: color.green/255,
+            blue: color.blue/255,
+            alpha: 1
+        )
+    }
+
 }
 
 extension Int {

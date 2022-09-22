@@ -40,7 +40,7 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: 0
+                constant: ScreenSize.height*0.08
             ),
             descriptionLabel.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,

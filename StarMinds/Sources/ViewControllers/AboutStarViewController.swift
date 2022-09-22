@@ -54,11 +54,12 @@ extension AboutStarViewController: ViewCodeConfiguration {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
 
         tableView.backgroundColor = UIColor(named: "CardBackground")
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+
         tableView.delegate = self
         tableView.dataSource = self
 
         tableView.register(VoxelTableViewCell.self, forCellReuseIdentifier: "VoxelCell")
-
         tableView.register(VoxDescriptionTableViewCell.self, forCellReuseIdentifier: "VoxDescriptionCell")
     }
 
