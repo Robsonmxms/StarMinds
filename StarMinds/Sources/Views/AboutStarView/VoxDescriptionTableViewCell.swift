@@ -67,5 +67,4 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    
 }

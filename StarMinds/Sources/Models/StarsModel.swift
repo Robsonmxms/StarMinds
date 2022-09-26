@@ -6,6 +6,7 @@
 //
 
 import UIKit
+// swiftlint: disable identifier_name
 
 // MARK: - StarModel
 struct StarModel: Codable {
@@ -174,4 +175,3 @@ struct StarColor: Codable {
         case red, green, blue
     }
 }
-

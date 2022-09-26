@@ -11,4 +11,3 @@ enum CellType: CaseIterable {
     case voxel
     case voxDescription
 }
-

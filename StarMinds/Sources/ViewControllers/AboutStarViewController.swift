@@ -13,7 +13,6 @@ class AboutStarViewController: UITableViewController {
     private var closeButton = UIBarButtonItem()
     private var star: Star
     private var voxelView = StarView()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,4 +102,3 @@ extension AboutStarViewController {
         }
     }
 }
-
