@@ -9,6 +9,8 @@ import UIKit
 
 class VoxDescriptionTableViewCell: UITableViewCell {
 
+    private var stack = UIStackView()
+
     private var descriptionLabel = UILabel()
 
     override init(
@@ -33,35 +35,55 @@ class VoxDescriptionTableViewCell: UITableViewCell {
 
 extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
     func buildHierarchy() {
-        contentView.addSubview(descriptionLabel)
+        stack.addArrangedSubview(descriptionLabel)
+        contentView.addSubview(stack)
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(
+            stack.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
                 constant: ScreenSize.height*0.08
             ),
-            descriptionLabel.widthAnchor.constraint(
+            stack.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
                 multiplier: 0.9
             ),
-            descriptionLabel.centerXAnchor.constraint(
+            stack.centerXAnchor.constraint(
                 equalTo: contentView.centerXAnchor
             ),
-            descriptionLabel.bottomAnchor.constraint(
+            stack.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor
+            ),
+            descriptionLabel.widthAnchor.constraint(
+                equalTo: contentView.widthAnchor,
+                multiplier: 0.8
+            ),
+            descriptionLabel.topAnchor.constraint(
+                equalTo: stack.topAnchor,
+                constant: ScreenSize.height*0.025
+            ),
+            descriptionLabel.bottomAnchor.constraint(
+                equalTo: stack.bottomAnchor,
+                constant: ScreenSize.height*0.025
             )
         ])
     }
 
     func configureViews() {
 
+        stack.backgroundColor = UIColor(named: "SheetBackground")
+        stack.clipsToBounds = true
+        stack.layer.cornerRadius = 20
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.translatesAutoresizingMaskIntoConstraints = false
+
         descriptionLabel.font = UIFont.systemFont(
             ofSize: ScreenSize.width*0.056,
             weight: .medium
         )
-        descriptionLabel.textAlignment = .center
+        descriptionLabel.textAlignment = .left
         descriptionLabel.numberOfLines = .max
         descriptionLabel.lineBreakMode = .byTruncatingTail
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
