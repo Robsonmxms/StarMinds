@@ -55,6 +55,7 @@ extension VoxelTableViewCell: ViewCodeConfiguration {
     }
 
     func configureViews() {
+        starView.addParallax(25)
         starView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

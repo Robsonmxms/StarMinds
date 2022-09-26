@@ -74,7 +74,7 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
 
         stack.backgroundColor = UIColor(named: "SheetBackground")
         stack.clipsToBounds = true
-        stack.layer.cornerRadius = 20
+        stack.layer.cornerRadius = ScreenSize.width*0.05
         stack.axis = .vertical
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
