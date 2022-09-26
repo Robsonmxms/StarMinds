@@ -1,0 +1,34 @@
+{
+    "phrases" : [
+        {
+            "id": 0,
+            "Text": "Olhe! há estrelas aqui."
+
+        },
+        {
+            "id": 1,
+            "Text": "Veja como brilham!"
+
+        },
+        {
+            "id": 2,
+            "Text": "Miau."
+
+        },
+        {
+            "id": 3,
+            "Text": "AH! As estrelas se mexem."
+
+        },
+        {
+            "id": 4,
+            "Text": "O espaço é lindo."
+
+        },
+        {
+            "id": 5,
+            "Text": "Brinque com as estrelas."
+
+        }
+    ]
+}

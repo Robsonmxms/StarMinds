@@ -9,9 +9,11 @@ import UIKit
 
 class CatTalksView: UIView {
 
-    private var isTalking = true
+    private var isTalking = false
     private var catImage = UIImageView()
     private var catLabel = UILabel()
+    private var catPhrases = CatPhasesModel.loadJson()
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,6 +22,7 @@ class CatTalksView: UIView {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isTalking.toggle()
+        applyViewCode()
     }
 
     required init?(coder: NSCoder) {
@@ -64,7 +67,11 @@ extension CatTalksView: ViewCodeConfiguration {
         catImage.contentMode = .scaleAspectFit
         catImage.translatesAutoresizingMaskIntoConstraints = false
 
-        catLabel.text = "Olhe! há estrelas aqui."
+        
+        guard let phrase = catPhrases?.randomElement()?.text else {
+            fatalError("Could't load phrase")
+        }
+        catLabel.text = isTalking ? phrase : ""
         catLabel.font = UIFont.systemFont(
             ofSize: ScreenSize.width*0.04,
             weight: .bold
