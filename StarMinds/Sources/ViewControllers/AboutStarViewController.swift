@@ -12,19 +12,15 @@ class AboutStarViewController: UITableViewController {
     private var closeIcon = UIImage()
     private var closeButton = UIBarButtonItem()
     private var star: Star
-    private var stack = UIStackView()
-    private var voxelView: VoxelView
-    private var descriptionLabel = UILabel()
+    private var voxelView = StarView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "CardBackground")
         applyViewCode()
     }
 
     init(with star: Star) {
         self.star = star
-        self.voxelView = VoxelView(frame: .infinite, star: star)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -35,31 +31,9 @@ class AboutStarViewController: UITableViewController {
 }
 
 extension AboutStarViewController: ViewCodeConfiguration {
-    func buildHierarchy() {
-        stack.addArrangedSubview(voxelView)
-        stack.addArrangedSubview(descriptionLabel)
-        view.addSubview(stack)
-    }
+    func buildHierarchy() {}
 
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-
-            stack.topAnchor.constraint(
-                equalTo: view.topAnchor,
-                constant: ScreenSize.height*0.1
-            ),
-            stack.bottomAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.bottomAnchor
-            ),
-            stack.widthAnchor.constraint(
-                equalTo: view.widthAnchor,
-                multiplier: 0.9
-            ),
-            stack.centerXAnchor.constraint(
-                equalTo: view.centerXAnchor
-            )
-        ])
-    }
+    func setupConstraints() {}
 
     func configureViews() {
         closeIcon = (UIImage(systemName: "xmark.circle.fill")?
@@ -78,21 +52,14 @@ extension AboutStarViewController: ViewCodeConfiguration {
         navigationItem.title = star.info.name.rawValue
         navigationController?.interactivePopGestureRecognizer?.delegate = self
 
-        stack.axis = .vertical
-        stack.distribution = .equalSpacing
-        stack.alignment = .center
-        stack.spacing = ScreenSize.height*0.03
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = UIColor(named: "CardBackground")
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
 
-        descriptionLabel.text = star.info.description
-        descriptionLabel.font = UIFont.systemFont(
-            ofSize: ScreenSize.width*0.056,
-            weight: .medium
-        )
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.numberOfLines = .max
-        descriptionLabel.lineBreakMode = .byTruncatingTail
+        tableView.delegate = self
+        tableView.dataSource = self
 
+        tableView.register(VoxelTableViewCell.self, forCellReuseIdentifier: "VoxelCell")
+        tableView.register(VoxDescriptionTableViewCell.self, forCellReuseIdentifier: "VoxDescriptionCell")
     }
 
     @objc func close() {
@@ -103,4 +70,35 @@ extension AboutStarViewController: ViewCodeConfiguration {
 
 extension AboutStarViewController: UIGestureRecognizerDelegate {
 
+}
+
+extension AboutStarViewController {
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return CellType.allCases.count
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentItem = CellType.allCases[indexPath.section]
+        switch currentItem {
+
+        case .voxel:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "VoxelCell")
+                    as? VoxelTableViewCell else {
+                fatalError("DequeueReusableCell failed while casting")
+            }
+            cell.configure(with: self.star)
+            return cell
+        case .voxDescription:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "VoxDescriptionCell")
+                    as? VoxDescriptionTableViewCell else {
+                fatalError("DequeueReusableCell failed while casting")
+            }
+            cell.configure(with: self.star)
+            return cell
+        }
+    }
 }

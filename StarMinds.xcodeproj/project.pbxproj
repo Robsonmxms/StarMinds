@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		59AA906928D0B73E00504FB8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA906828D0B73E00504FB8 /* UIView.swift */; };
+		D699598E28DCA41300DBC595 /* Ana_Amarela#fae594.dae in Resources */ = {isa = PBXBuildFile; fileRef = D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */; };
+		D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */; };
+		D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */; };
 		FE1D977B28D20BEC003DBFF4 /* ConstantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */; };
 		FE559C6728CF9F4000FAA814 /* Stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FEC6052428CF70FF0097814F /* Stars.json */; };
 		FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */; };
@@ -27,53 +30,27 @@
 		FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE795D3C28C76EC700469569 /* CatTalksView.swift */; };
 		FE795D3F28C780D400469569 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE795D3E28C780D400469569 /* CollectionViewCell.swift */; };
 		FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */ = {isa = PBXBuildFile; fileRef = FECDA6B528C6395300E2485E /* 89151-stars.json */; };
-		FEE61AAA28D3571600503463 /* Ana_Amarela#f4c06a-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7528D3571300503463 /* Ana_Amarela#f4c06a-obj.vox.png */; };
-		FEE61AAB28D3571600503463 /* Ana_Amarela#f9e074-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7628D3571400503463 /* Ana_Amarela#f9e074-obj.vox.png */; };
-		FEE61AAC28D3571600503463 /* Ana_Amarela#f4c06a-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7728D3571400503463 /* Ana_Amarela#f4c06a-obj.dae */; settings = {ATTRIBUTES = ("--compress", ); }; };
-		FEE61AAD28D3571600503463 /* Ana_Amarela#f9e074-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7828D3571400503463 /* Ana_Amarela#f9e074-obj.dae */; };
-		FEE61AAE28D3571600503463 /* Ana_Amarela#fae594-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7928D3571400503463 /* Ana_Amarela#fae594-obj.dae */; };
-		FEE61AAF28D3571600503463 /* Ana_Amarela#fae594-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7A28D3571400503463 /* Ana_Amarela#fae594-obj.vox.png */; };
-		FEE61AB028D3571600503463 /* Ana_Branca#c8edfd-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7C28D3571400503463 /* Ana_Branca#c8edfd-obj.dae */; };
-		FEE61AB128D3571600503463 /* Ana_Branca#ebf8f9-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7D28D3571400503463 /* Ana_Branca#ebf8f9-obj.vox.png */; };
-		FEE61AB228D3571600503463 /* Ana_Branca#c8edfd-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7E28D3571400503463 /* Ana_Branca#c8edfd-obj.vox.png */; };
-		FEE61AB328D3571600503463 /* Ana_Branca#e4f5f7-0bj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A7F28D3571400503463 /* Ana_Branca#e4f5f7-0bj.vox.png */; };
-		FEE61AB428D3571600503463 /* Ana_Branca#ebf8f9-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8028D3571400503463 /* Ana_Branca#ebf8f9-obj.dae */; };
-		FEE61AB528D3571600503463 /* Ana_Branca#e4f5f7-0bj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8128D3571400503463 /* Ana_Branca#e4f5f7-0bj.dae */; };
-		FEE61AB628D3571600503463 /* Gigante_Azul#4c94d3.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8328D3571400503463 /* Gigante_Azul#4c94d3.png */; };
-		FEE61AB728D3571600503463 /* Gigante_Azul#5eb2f5.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8428D3571400503463 /* Gigante_Azul#5eb2f5.dae */; };
-		FEE61AB828D3571600503463 /* Gigante_Azul#3583d0.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8528D3571400503463 /* Gigante_Azul#3583d0.dae */; };
-		FEE61AB928D3571600503463 /* Gigante_Azul#4c94d3.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8628D3571400503463 /* Gigante_Azul#4c94d3.dae */; };
-		FEE61ABA28D3571600503463 /* Gigante_Azul#3583d0.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8728D3571400503463 /* Gigante_Azul#3583d0.vox.png */; };
-		FEE61ABB28D3571600503463 /* Gigante_Azul#5eb2f5.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8828D3571400503463 /* Gigante_Azul#5eb2f5.vox.png */; };
-		FEE61ABC28D3571600503463 /* Ana_Amarela#f9e074-obj.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8A28D3571400503463 /* Ana_Amarela#f9e074-obj.dae */; };
-		FEE61ABD28D3571600503463 /* Anas_Marrons#4d0805-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8D28D3571400503463 /* Anas_Marrons#4d0805-obj.vox.png */; };
-		FEE61ABE28D3571600503463 /* Anas_Marrons#82190e-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8E28D3571400503463 /* Anas_Marrons#82190e-obj.vox.png */; };
-		FEE61ABF28D3571600503463 /* Anas_Marrons#b73713.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A8F28D3571500503463 /* Anas_Marrons#b73713.dae */; };
-		FEE61AC028D3571600503463 /* Anas_Marrons#82190e.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9028D3571500503463 /* Anas_Marrons#82190e.dae */; };
-		FEE61AC128D3571600503463 /* Anas_Marrons#4d0805.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9128D3571500503463 /* Anas_Marrons#4d0805.dae */; };
-		FEE61AC228D3571600503463 /* Anas_Marrons#b73713-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9228D3571500503463 /* Anas_Marrons#b73713-obj.vox.png */; };
-		FEE61AC328D3571600503463 /* Estrela_Neutrons#a7c3cb-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9428D3571500503463 /* Estrela_Neutrons#a7c3cb-obj.vox.png */; };
-		FEE61AC428D3571600503463 /* Estrela_Neutrons#c7ccc8.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9528D3571500503463 /* Estrela_Neutrons#c7ccc8.dae */; };
-		FEE61AC528D3571600503463 /* Estrela_Neutrons#959dba.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9628D3571500503463 /* Estrela_Neutrons#959dba.dae */; };
-		FEE61AC628D3571600503463 /* Estrela_Neutrons#959dba-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9728D3571500503463 /* Estrela_Neutrons#959dba-obj.vox.png */; };
-		FEE61AC728D3571600503463 /* Estrela_Neutrons#eeeeee-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9828D3571500503463 /* Estrela_Neutrons#eeeeee-obj.vox.png */; };
-		FEE61AC828D3571600503463 /* Estrela_Neutrons#a7c3cb.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9928D3571500503463 /* Estrela_Neutrons#a7c3cb.dae */; };
-		FEE61AC928D3571600503463 /* Estrela_Neutrons#c7ccc8-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9A28D3571500503463 /* Estrela_Neutrons#c7ccc8-obj.vox.png */; };
-		FEE61ACA28D3571600503463 /* Estrela_Neutrons#eeeeee.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9B28D3571500503463 /* Estrela_Neutrons#eeeeee.dae */; };
-		FEE61ACB28D3571600503463 /* Estrela_Variavel#f45600-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9D28D3571500503463 /* Estrela_Variavel#f45600-obj.vox.png */; };
-		FEE61ACC28D3571600503463 /* Estrela_Variavel#d8a201.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9E28D3571500503463 /* Estrela_Variavel#d8a201.dae */; };
-		FEE61ACD28D3571600503463 /* Estrela_Variavel#f45600.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61A9F28D3571500503463 /* Estrela_Variavel#f45600.dae */; };
-		FEE61ACE28D3571600503463 /* Estrela_Variavel#d8a201-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA028D3571500503463 /* Estrela_Variavel#d8a201-obj.vox.png */; };
-		FEE61ACF28D3571600503463 /* Estrela_Variavel#d86600-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA128D3571500503463 /* Estrela_Variavel#d86600-obj.vox.png */; };
-		FEE61AD028D3571600503463 /* Estrela_Variavel#d86600.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA228D3571500503463 /* Estrela_Variavel#d86600.dae */; };
-		FEE61AD128D3571600503463 /* Gigante_Vermelha#ea3a28-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA428D3571500503463 /* Gigante_Vermelha#ea3a28-obj.vox.png */; };
-		FEE61AD228D3571600503463 /* Gigante_Vermelha#f1751e-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA528D3571500503463 /* Gigante_Vermelha#f1751e-obj.vox.png */; };
-		FEE61AD328D3571600503463 /* Gigante_Vermelha#ea3a28.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA628D3571500503463 /* Gigante_Vermelha#ea3a28.dae */; };
-		FEE61AD428D3571600503463 /* Gigante_Vermelha#f1751e.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA728D3571500503463 /* Gigante_Vermelha#f1751e.dae */; };
-		FEE61AD528D3571600503463 /* Gigante_Vermelha#fdb332.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA828D3571500503463 /* Gigante_Vermelha#fdb332.dae */; };
-		FEE61AD628D3571600503463 /* Gigante_Vermelha#fdb332-obj.vox.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AA928D3571500503463 /* Gigante_Vermelha#fdb332-obj.vox.png */; };
-		FEE61ADA28D360AA00503463 /* StarScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = FEE61AD928D360AA00503463 /* StarScene.scn */; };
-		FEE61ADC28D362A200503463 /* VoxelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE61ADB28D362A200503463 /* VoxelView.swift */; };
+		FEE1EBA328DA06FB00F5C757 /* Ana_Amarela#f4c06a.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB8E28DA06F700F5C757 /* Ana_Amarela#f4c06a.dae */; };
+		FEE1EBA428DA06FB00F5C757 /* Estrela_Variavel#d8a201.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB8F28DA06F700F5C757 /* Estrela_Variavel#d8a201.dae */; };
+		FEE1EBA528DA06FB00F5C757 /* Anas_Marrons#4d0805.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9028DA06F700F5C757 /* Anas_Marrons#4d0805.dae */; };
+		FEE1EBA628DA06FB00F5C757 /* Estrela_Variavel#d86600.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9128DA06F800F5C757 /* Estrela_Variavel#d86600.dae */; };
+		FEE1EBA728DA06FB00F5C757 /* Estrela_Neutrons#c7ccc8.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9228DA06F800F5C757 /* Estrela_Neutrons#c7ccc8.dae */; };
+		FEE1EBA828DA06FB00F5C757 /* Estrela_Variavel#f45600.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9328DA06F800F5C757 /* Estrela_Variavel#f45600.dae */; };
+		FEE1EBA928DA06FB00F5C757 /* Ana_Branca#ebf8f9.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9428DA06F800F5C757 /* Ana_Branca#ebf8f9.dae */; };
+		FEE1EBAA28DA06FB00F5C757 /* Gigante_Vermelha#fdb332.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9528DA06F800F5C757 /* Gigante_Vermelha#fdb332.dae */; };
+		FEE1EBAB28DA06FB00F5C757 /* Gigante_Azul#3583d0.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9628DA06F800F5C757 /* Gigante_Azul#3583d0.dae */; };
+		FEE1EBAC28DA06FB00F5C757 /* Ana_Branca#c8edfd.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9728DA06F900F5C757 /* Ana_Branca#c8edfd.dae */; };
+		FEE1EBAD28DA06FB00F5C757 /* Ana_Amarela#f9e074.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9828DA06F900F5C757 /* Ana_Amarela#f9e074.dae */; };
+		FEE1EBAE28DA06FB00F5C757 /* Anas_Marrons#b73713.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9928DA06F900F5C757 /* Anas_Marrons#b73713.dae */; };
+		FEE1EBAF28DA06FB00F5C757 /* Anas_Marrons#82190e.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9A28DA06F900F5C757 /* Anas_Marrons#82190e.dae */; };
+		FEE1EBB028DA06FB00F5C757 /* Estrela_Neutrons#959dba.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9B28DA06F900F5C757 /* Estrela_Neutrons#959dba.dae */; };
+		FEE1EBB128DA06FB00F5C757 /* Gigante_Azul#4c94d3.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9C28DA06F900F5C757 /* Gigante_Azul#4c94d3.dae */; };
+		FEE1EBB228DA06FB00F5C757 /* Ana_Branca#e4f5f7.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */; };
+		FEE1EBB428DA06FB00F5C757 /* Estrela_Neutrons#a7c3cb.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EB9F28DA06FA00F5C757 /* Estrela_Neutrons#a7c3cb.dae */; };
+		FEE1EBB528DA06FB00F5C757 /* Gigante_Azul#5eb2f5.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */; };
+		FEE1EBB628DA06FB00F5C757 /* Gigante_Vermelha#ea3a28.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */; };
+		FEE1EBB728DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae in Resources */ = {isa = PBXBuildFile; fileRef = FEE1EBA228DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae */; };
+		FEE61ADC28D362A200503463 /* VoxelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +72,9 @@
 
 /* Begin PBXFileReference section */
 		59AA906828D0B73E00504FB8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#fae594.dae"; sourceTree = "<group>"; };
+		D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
+		D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsModel.swift; sourceTree = "<group>"; };
 		FE5F9ABB28CB72B700B79303 /* AboutStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStarViewController.swift; sourceTree = "<group>"; };
 		FE5F9ABD28CB871B00B79303 /* StarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsModel.swift; sourceTree = "<group>"; };
@@ -117,53 +97,27 @@
 		FE795D3E28C780D400469569 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FEC6052428CF70FF0097814F /* Stars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stars.json; sourceTree = "<group>"; };
 		FECDA6B528C6395300E2485E /* 89151-stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "89151-stars.json"; sourceTree = "<group>"; };
-		FEE61A7528D3571300503463 /* Ana_Amarela#f4c06a-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Amarela#f4c06a-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A7628D3571400503463 /* Ana_Amarela#f9e074-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Amarela#f9e074-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A7728D3571400503463 /* Ana_Amarela#f4c06a-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#f4c06a-obj.dae"; sourceTree = "<group>"; };
-		FEE61A7828D3571400503463 /* Ana_Amarela#f9e074-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#f9e074-obj.dae"; sourceTree = "<group>"; };
-		FEE61A7928D3571400503463 /* Ana_Amarela#fae594-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#fae594-obj.dae"; sourceTree = "<group>"; };
-		FEE61A7A28D3571400503463 /* Ana_Amarela#fae594-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Amarela#fae594-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A7C28D3571400503463 /* Ana_Branca#c8edfd-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#c8edfd-obj.dae"; sourceTree = "<group>"; };
-		FEE61A7D28D3571400503463 /* Ana_Branca#ebf8f9-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Branca#ebf8f9-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A7E28D3571400503463 /* Ana_Branca#c8edfd-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Branca#c8edfd-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A7F28D3571400503463 /* Ana_Branca#e4f5f7-0bj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ana_Branca#e4f5f7-0bj.vox.png"; sourceTree = "<group>"; };
-		FEE61A8028D3571400503463 /* Ana_Branca#ebf8f9-obj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#ebf8f9-obj.dae"; sourceTree = "<group>"; };
-		FEE61A8128D3571400503463 /* Ana_Branca#e4f5f7-0bj.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#e4f5f7-0bj.dae"; sourceTree = "<group>"; };
-		FEE61A8328D3571400503463 /* Gigante_Azul#4c94d3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Azul#4c94d3.png"; sourceTree = "<group>"; };
-		FEE61A8428D3571400503463 /* Gigante_Azul#5eb2f5.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#5eb2f5.dae"; sourceTree = "<group>"; };
-		FEE61A8528D3571400503463 /* Gigante_Azul#3583d0.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#3583d0.dae"; sourceTree = "<group>"; };
-		FEE61A8628D3571400503463 /* Gigante_Azul#4c94d3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#4c94d3.dae"; sourceTree = "<group>"; };
-		FEE61A8728D3571400503463 /* Gigante_Azul#3583d0.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Azul#3583d0.vox.png"; sourceTree = "<group>"; };
-		FEE61A8828D3571400503463 /* Gigante_Azul#5eb2f5.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Azul#5eb2f5.vox.png"; sourceTree = "<group>"; };
-		FEE61A8B28D3571400503463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; name = Base; path = "Ana_Amarela#f9e074-obj.dae"; sourceTree = "<group>"; };
-		FEE61A8D28D3571400503463 /* Anas_Marrons#4d0805-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anas_Marrons#4d0805-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A8E28D3571400503463 /* Anas_Marrons#82190e-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anas_Marrons#82190e-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A8F28D3571500503463 /* Anas_Marrons#b73713.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#b73713.dae"; sourceTree = "<group>"; };
-		FEE61A9028D3571500503463 /* Anas_Marrons#82190e.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#82190e.dae"; sourceTree = "<group>"; };
-		FEE61A9128D3571500503463 /* Anas_Marrons#4d0805.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#4d0805.dae"; sourceTree = "<group>"; };
-		FEE61A9228D3571500503463 /* Anas_Marrons#b73713-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anas_Marrons#b73713-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9428D3571500503463 /* Estrela_Neutrons#a7c3cb-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Neutrons#a7c3cb-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9528D3571500503463 /* Estrela_Neutrons#c7ccc8.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#c7ccc8.dae"; sourceTree = "<group>"; };
-		FEE61A9628D3571500503463 /* Estrela_Neutrons#959dba.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#959dba.dae"; sourceTree = "<group>"; };
-		FEE61A9728D3571500503463 /* Estrela_Neutrons#959dba-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Neutrons#959dba-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9828D3571500503463 /* Estrela_Neutrons#eeeeee-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Neutrons#eeeeee-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9928D3571500503463 /* Estrela_Neutrons#a7c3cb.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#a7c3cb.dae"; sourceTree = "<group>"; };
-		FEE61A9A28D3571500503463 /* Estrela_Neutrons#c7ccc8-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Neutrons#c7ccc8-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9B28D3571500503463 /* Estrela_Neutrons#eeeeee.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#eeeeee.dae"; sourceTree = "<group>"; };
-		FEE61A9D28D3571500503463 /* Estrela_Variavel#f45600-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Variavel#f45600-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61A9E28D3571500503463 /* Estrela_Variavel#d8a201.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#d8a201.dae"; sourceTree = "<group>"; };
-		FEE61A9F28D3571500503463 /* Estrela_Variavel#f45600.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#f45600.dae"; sourceTree = "<group>"; };
-		FEE61AA028D3571500503463 /* Estrela_Variavel#d8a201-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Variavel#d8a201-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61AA128D3571500503463 /* Estrela_Variavel#d86600-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estrela_Variavel#d86600-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61AA228D3571500503463 /* Estrela_Variavel#d86600.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#d86600.dae"; sourceTree = "<group>"; };
-		FEE61AA428D3571500503463 /* Gigante_Vermelha#ea3a28-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Vermelha#ea3a28-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61AA528D3571500503463 /* Gigante_Vermelha#f1751e-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Vermelha#f1751e-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61AA628D3571500503463 /* Gigante_Vermelha#ea3a28.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#ea3a28.dae"; sourceTree = "<group>"; };
-		FEE61AA728D3571500503463 /* Gigante_Vermelha#f1751e.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#f1751e.dae"; sourceTree = "<group>"; };
-		FEE61AA828D3571500503463 /* Gigante_Vermelha#fdb332.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#fdb332.dae"; sourceTree = "<group>"; };
-		FEE61AA928D3571500503463 /* Gigante_Vermelha#fdb332-obj.vox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gigante_Vermelha#fdb332-obj.vox.png"; sourceTree = "<group>"; };
-		FEE61AD928D360AA00503463 /* StarScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = StarScene.scn; sourceTree = "<group>"; };
-		FEE61ADB28D362A200503463 /* VoxelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxelView.swift; sourceTree = "<group>"; };
+		FEE1EB8E28DA06F700F5C757 /* Ana_Amarela#f4c06a.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#f4c06a.dae"; sourceTree = "<group>"; };
+		FEE1EB8F28DA06F700F5C757 /* Estrela_Variavel#d8a201.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#d8a201.dae"; sourceTree = "<group>"; };
+		FEE1EB9028DA06F700F5C757 /* Anas_Marrons#4d0805.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#4d0805.dae"; sourceTree = "<group>"; };
+		FEE1EB9128DA06F800F5C757 /* Estrela_Variavel#d86600.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#d86600.dae"; sourceTree = "<group>"; };
+		FEE1EB9228DA06F800F5C757 /* Estrela_Neutrons#c7ccc8.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#c7ccc8.dae"; sourceTree = "<group>"; };
+		FEE1EB9328DA06F800F5C757 /* Estrela_Variavel#f45600.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Variavel#f45600.dae"; sourceTree = "<group>"; };
+		FEE1EB9428DA06F800F5C757 /* Ana_Branca#ebf8f9.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#ebf8f9.dae"; sourceTree = "<group>"; };
+		FEE1EB9528DA06F800F5C757 /* Gigante_Vermelha#fdb332.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#fdb332.dae"; sourceTree = "<group>"; };
+		FEE1EB9628DA06F800F5C757 /* Gigante_Azul#3583d0.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#3583d0.dae"; sourceTree = "<group>"; };
+		FEE1EB9728DA06F900F5C757 /* Ana_Branca#c8edfd.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#c8edfd.dae"; sourceTree = "<group>"; };
+		FEE1EB9828DA06F900F5C757 /* Ana_Amarela#f9e074.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#f9e074.dae"; sourceTree = "<group>"; };
+		FEE1EB9928DA06F900F5C757 /* Anas_Marrons#b73713.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#b73713.dae"; sourceTree = "<group>"; };
+		FEE1EB9A28DA06F900F5C757 /* Anas_Marrons#82190e.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Anas_Marrons#82190e.dae"; sourceTree = "<group>"; };
+		FEE1EB9B28DA06F900F5C757 /* Estrela_Neutrons#959dba.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#959dba.dae"; sourceTree = "<group>"; };
+		FEE1EB9C28DA06F900F5C757 /* Gigante_Azul#4c94d3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#4c94d3.dae"; sourceTree = "<group>"; };
+		FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Branca#e4f5f7.dae"; sourceTree = "<group>"; };
+		FEE1EB9F28DA06FA00F5C757 /* Estrela_Neutrons#a7c3cb.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Estrela_Neutrons#a7c3cb.dae"; sourceTree = "<group>"; };
+		FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Azul#5eb2f5.dae"; sourceTree = "<group>"; };
+		FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#ea3a28.dae"; sourceTree = "<group>"; };
+		FEE1EBA228DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Gigante_Vermelha#f1751e.dae"; sourceTree = "<group>"; };
+		FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxelTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +207,7 @@
 		FE7328F828C62E3E002B7FF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FEE61A7328D3570000503463 /* SceneAssets */,
+				FEE1EB8D28DA06CE00F5C757 /* art.assets */,
 				FECDA6B528C6395300E2485E /* 89151-stars.json */,
 				FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */,
 				FEC6052428CF70FF0097814F /* Stars.json */,
@@ -278,6 +232,7 @@
 			children = (
 				FE5F9ABD28CB871B00B79303 /* StarsModel.swift */,
 				FE1D977A28D20BEC003DBFF4 /* ConstantsModel.swift */,
+				D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,121 +273,32 @@
 			path = UIViewExtensions;
 			sourceTree = "<group>";
 		};
-		FEE61A7328D3570000503463 /* SceneAssets */ = {
+		FEE1EB8D28DA06CE00F5C757 /* art.assets */ = {
 			isa = PBXGroup;
 			children = (
-				FEE61A7428D3571300503463 /* Ana Amarela */,
-				FEE61A7B28D3571400503463 /* Ana Branca */,
-				FEE61A8C28D3571400503463 /* Anas Marrons */,
-				FEE61A8928D3571400503463 /* Base.lproj */,
-				FEE61A9328D3571500503463 /* Estrela de Neutrons */,
-				FEE61A9C28D3571500503463 /* Estrela Variavel */,
-				FEE61A8228D3571400503463 /* Gigante Azul */,
-				FEE61AA328D3571500503463 /* Gigante Vermelha */,
+				FEE1EB8E28DA06F700F5C757 /* Ana_Amarela#f4c06a.dae */,
+				FEE1EB9828DA06F900F5C757 /* Ana_Amarela#f9e074.dae */,
+				D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */,
+				FEE1EB9728DA06F900F5C757 /* Ana_Branca#c8edfd.dae */,
+				FEE1EB9D28DA06FA00F5C757 /* Ana_Branca#e4f5f7.dae */,
+				FEE1EB9428DA06F800F5C757 /* Ana_Branca#ebf8f9.dae */,
+				FEE1EB9028DA06F700F5C757 /* Anas_Marrons#4d0805.dae */,
+				FEE1EB9A28DA06F900F5C757 /* Anas_Marrons#82190e.dae */,
+				FEE1EB9928DA06F900F5C757 /* Anas_Marrons#b73713.dae */,
+				FEE1EB9B28DA06F900F5C757 /* Estrela_Neutrons#959dba.dae */,
+				FEE1EB9F28DA06FA00F5C757 /* Estrela_Neutrons#a7c3cb.dae */,
+				FEE1EB9228DA06F800F5C757 /* Estrela_Neutrons#c7ccc8.dae */,
+				FEE1EB8F28DA06F700F5C757 /* Estrela_Variavel#d8a201.dae */,
+				FEE1EB9128DA06F800F5C757 /* Estrela_Variavel#d86600.dae */,
+				FEE1EB9328DA06F800F5C757 /* Estrela_Variavel#f45600.dae */,
+				FEE1EB9C28DA06F900F5C757 /* Gigante_Azul#4c94d3.dae */,
+				FEE1EBA028DA06FA00F5C757 /* Gigante_Azul#5eb2f5.dae */,
+				FEE1EB9628DA06F800F5C757 /* Gigante_Azul#3583d0.dae */,
+				FEE1EBA128DA06FA00F5C757 /* Gigante_Vermelha#ea3a28.dae */,
+				FEE1EBA228DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae */,
+				FEE1EB9528DA06F800F5C757 /* Gigante_Vermelha#fdb332.dae */,
 			);
-			path = SceneAssets;
-			sourceTree = "<group>";
-		};
-		FEE61A7428D3571300503463 /* Ana Amarela */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A7528D3571300503463 /* Ana_Amarela#f4c06a-obj.vox.png */,
-				FEE61A7628D3571400503463 /* Ana_Amarela#f9e074-obj.vox.png */,
-				FEE61A7728D3571400503463 /* Ana_Amarela#f4c06a-obj.dae */,
-				FEE61A7828D3571400503463 /* Ana_Amarela#f9e074-obj.dae */,
-				FEE61A7928D3571400503463 /* Ana_Amarela#fae594-obj.dae */,
-				FEE61AD928D360AA00503463 /* StarScene.scn */,
-				FEE61A7A28D3571400503463 /* Ana_Amarela#fae594-obj.vox.png */,
-			);
-			path = "Ana Amarela";
-			sourceTree = "<group>";
-		};
-		FEE61A7B28D3571400503463 /* Ana Branca */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A7C28D3571400503463 /* Ana_Branca#c8edfd-obj.dae */,
-				FEE61A7D28D3571400503463 /* Ana_Branca#ebf8f9-obj.vox.png */,
-				FEE61A7E28D3571400503463 /* Ana_Branca#c8edfd-obj.vox.png */,
-				FEE61A7F28D3571400503463 /* Ana_Branca#e4f5f7-0bj.vox.png */,
-				FEE61A8028D3571400503463 /* Ana_Branca#ebf8f9-obj.dae */,
-				FEE61A8128D3571400503463 /* Ana_Branca#e4f5f7-0bj.dae */,
-			);
-			path = "Ana Branca";
-			sourceTree = "<group>";
-		};
-		FEE61A8228D3571400503463 /* Gigante Azul */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A8328D3571400503463 /* Gigante_Azul#4c94d3.png */,
-				FEE61A8428D3571400503463 /* Gigante_Azul#5eb2f5.dae */,
-				FEE61A8528D3571400503463 /* Gigante_Azul#3583d0.dae */,
-				FEE61A8628D3571400503463 /* Gigante_Azul#4c94d3.dae */,
-				FEE61A8728D3571400503463 /* Gigante_Azul#3583d0.vox.png */,
-				FEE61A8828D3571400503463 /* Gigante_Azul#5eb2f5.vox.png */,
-			);
-			path = "Gigante Azul";
-			sourceTree = "<group>";
-		};
-		FEE61A8928D3571400503463 /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A8A28D3571400503463 /* Ana_Amarela#f9e074-obj.dae */,
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
-		FEE61A8C28D3571400503463 /* Anas Marrons */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A8D28D3571400503463 /* Anas_Marrons#4d0805-obj.vox.png */,
-				FEE61A8E28D3571400503463 /* Anas_Marrons#82190e-obj.vox.png */,
-				FEE61A8F28D3571500503463 /* Anas_Marrons#b73713.dae */,
-				FEE61A9028D3571500503463 /* Anas_Marrons#82190e.dae */,
-				FEE61A9128D3571500503463 /* Anas_Marrons#4d0805.dae */,
-				FEE61A9228D3571500503463 /* Anas_Marrons#b73713-obj.vox.png */,
-			);
-			path = "Anas Marrons";
-			sourceTree = "<group>";
-		};
-		FEE61A9328D3571500503463 /* Estrela de Neutrons */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A9428D3571500503463 /* Estrela_Neutrons#a7c3cb-obj.vox.png */,
-				FEE61A9528D3571500503463 /* Estrela_Neutrons#c7ccc8.dae */,
-				FEE61A9628D3571500503463 /* Estrela_Neutrons#959dba.dae */,
-				FEE61A9728D3571500503463 /* Estrela_Neutrons#959dba-obj.vox.png */,
-				FEE61A9828D3571500503463 /* Estrela_Neutrons#eeeeee-obj.vox.png */,
-				FEE61A9928D3571500503463 /* Estrela_Neutrons#a7c3cb.dae */,
-				FEE61A9A28D3571500503463 /* Estrela_Neutrons#c7ccc8-obj.vox.png */,
-				FEE61A9B28D3571500503463 /* Estrela_Neutrons#eeeeee.dae */,
-			);
-			path = "Estrela de Neutrons";
-			sourceTree = "<group>";
-		};
-		FEE61A9C28D3571500503463 /* Estrela Variavel */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61A9D28D3571500503463 /* Estrela_Variavel#f45600-obj.vox.png */,
-				FEE61A9E28D3571500503463 /* Estrela_Variavel#d8a201.dae */,
-				FEE61A9F28D3571500503463 /* Estrela_Variavel#f45600.dae */,
-				FEE61AA028D3571500503463 /* Estrela_Variavel#d8a201-obj.vox.png */,
-				FEE61AA128D3571500503463 /* Estrela_Variavel#d86600-obj.vox.png */,
-				FEE61AA228D3571500503463 /* Estrela_Variavel#d86600.dae */,
-			);
-			path = "Estrela Variavel";
-			sourceTree = "<group>";
-		};
-		FEE61AA328D3571500503463 /* Gigante Vermelha */ = {
-			isa = PBXGroup;
-			children = (
-				FEE61AA428D3571500503463 /* Gigante_Vermelha#ea3a28-obj.vox.png */,
-				FEE61AA528D3571500503463 /* Gigante_Vermelha#f1751e-obj.vox.png */,
-				FEE61AA628D3571500503463 /* Gigante_Vermelha#ea3a28.dae */,
-				FEE61AA728D3571500503463 /* Gigante_Vermelha#f1751e.dae */,
-				FEE61AA828D3571500503463 /* Gigante_Vermelha#fdb332.dae */,
-				FEE61AA928D3571500503463 /* Gigante_Vermelha#fdb332-obj.vox.png */,
-			);
-			path = "Gigante Vermelha";
+			path = art.assets;
 			sourceTree = "<group>";
 		};
 		FEF5674C28D4A60B00D1112D /* ExplorerView */ = {
@@ -447,7 +313,8 @@
 		FEF5674D28D4A62500D1112D /* AboutStarView */ = {
 			isa = PBXGroup;
 			children = (
-				FEE61ADB28D362A200503463 /* VoxelView.swift */,
+				FEE61ADB28D362A200503463 /* VoxelTableViewCell.swift */,
+				D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */,
 			);
 			path = AboutStarView;
 			sourceTree = "<group>";
@@ -563,56 +430,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE61ABA28D3571600503463 /* Gigante_Azul#3583d0.vox.png in Resources */,
-				FEE61ABD28D3571600503463 /* Anas_Marrons#4d0805-obj.vox.png in Resources */,
-				FEE61AB228D3571600503463 /* Ana_Branca#c8edfd-obj.vox.png in Resources */,
-				FEE61ABF28D3571600503463 /* Anas_Marrons#b73713.dae in Resources */,
-				FEE61ACA28D3571600503463 /* Estrela_Neutrons#eeeeee.dae in Resources */,
-				FEE61AD628D3571600503463 /* Gigante_Vermelha#fdb332-obj.vox.png in Resources */,
-				FEE61AC828D3571600503463 /* Estrela_Neutrons#a7c3cb.dae in Resources */,
-				FEE61AB428D3571600503463 /* Ana_Branca#ebf8f9-obj.dae in Resources */,
+				FEE1EBAC28DA06FB00F5C757 /* Ana_Branca#c8edfd.dae in Resources */,
+				FEE1EBAF28DA06FB00F5C757 /* Anas_Marrons#82190e.dae in Resources */,
+				FEE1EBA528DA06FB00F5C757 /* Anas_Marrons#4d0805.dae in Resources */,
 				FE559C6728CF9F4000FAA814 /* Stars.json in Resources */,
-				FEE61AC028D3571600503463 /* Anas_Marrons#82190e.dae in Resources */,
-				FEE61AC128D3571600503463 /* Anas_Marrons#4d0805.dae in Resources */,
-				FEE61AB728D3571600503463 /* Gigante_Azul#5eb2f5.dae in Resources */,
-				FEE61AC228D3571600503463 /* Anas_Marrons#b73713-obj.vox.png in Resources */,
-				FEE61AB628D3571600503463 /* Gigante_Azul#4c94d3.png in Resources */,
-				FEE61AAA28D3571600503463 /* Ana_Amarela#f4c06a-obj.vox.png in Resources */,
-				FEE61AB528D3571600503463 /* Ana_Branca#e4f5f7-0bj.dae in Resources */,
-				FEE61ACF28D3571600503463 /* Estrela_Variavel#d86600-obj.vox.png in Resources */,
-				FEE61ABE28D3571600503463 /* Anas_Marrons#82190e-obj.vox.png in Resources */,
-				FEE61AAC28D3571600503463 /* Ana_Amarela#f4c06a-obj.dae in Resources */,
-				FEE61AAB28D3571600503463 /* Ana_Amarela#f9e074-obj.vox.png in Resources */,
-				FEE61ACE28D3571600503463 /* Estrela_Variavel#d8a201-obj.vox.png in Resources */,
-				FEE61AB128D3571600503463 /* Ana_Branca#ebf8f9-obj.vox.png in Resources */,
-				FEE61AC528D3571600503463 /* Estrela_Neutrons#959dba.dae in Resources */,
-				FEE61AD128D3571600503463 /* Gigante_Vermelha#ea3a28-obj.vox.png in Resources */,
-				FEE61ABC28D3571600503463 /* Ana_Amarela#f9e074-obj.dae in Resources */,
-				FEE61AC628D3571600503463 /* Estrela_Neutrons#959dba-obj.vox.png in Resources */,
-				FEE61AC328D3571600503463 /* Estrela_Neutrons#a7c3cb-obj.vox.png in Resources */,
-				FEE61AC428D3571600503463 /* Estrela_Neutrons#c7ccc8.dae in Resources */,
-				FEE61AD028D3571600503463 /* Estrela_Variavel#d86600.dae in Resources */,
-				FEE61AD228D3571600503463 /* Gigante_Vermelha#f1751e-obj.vox.png in Resources */,
-				FEE61AB328D3571600503463 /* Ana_Branca#e4f5f7-0bj.vox.png in Resources */,
+				FEE1EBB628DA06FB00F5C757 /* Gigante_Vermelha#ea3a28.dae in Resources */,
+				FEE1EBB728DA06FB00F5C757 /* Gigante_Vermelha#f1751e.dae in Resources */,
+				FEE1EBB428DA06FB00F5C757 /* Estrela_Neutrons#a7c3cb.dae in Resources */,
+				FEE1EBA428DA06FB00F5C757 /* Estrela_Variavel#d8a201.dae in Resources */,
+				FEE1EBA328DA06FB00F5C757 /* Ana_Amarela#f4c06a.dae in Resources */,
 				FE7328CE28C61E8B002B7FF9 /* LaunchScreen.storyboard in Resources */,
+				FEE1EBA928DA06FB00F5C757 /* Ana_Branca#ebf8f9.dae in Resources */,
+				FEE1EBA728DA06FB00F5C757 /* Estrela_Neutrons#c7ccc8.dae in Resources */,
+				FEE1EBB128DA06FB00F5C757 /* Gigante_Azul#4c94d3.dae in Resources */,
 				FECDA6B628C6395300E2485E /* 89151-stars.json in Resources */,
-				FEE61AAD28D3571600503463 /* Ana_Amarela#f9e074-obj.dae in Resources */,
-				FEE61ACD28D3571600503463 /* Estrela_Variavel#f45600.dae in Resources */,
-				FEE61ADA28D360AA00503463 /* StarScene.scn in Resources */,
-				FEE61ABB28D3571600503463 /* Gigante_Azul#5eb2f5.vox.png in Resources */,
-				FEE61AC728D3571600503463 /* Estrela_Neutrons#eeeeee-obj.vox.png in Resources */,
-				FEE61AAF28D3571600503463 /* Ana_Amarela#fae594-obj.vox.png in Resources */,
-				FEE61ACC28D3571600503463 /* Estrela_Variavel#d8a201.dae in Resources */,
-				FEE61AAE28D3571600503463 /* Ana_Amarela#fae594-obj.dae in Resources */,
-				FEE61AD428D3571600503463 /* Gigante_Vermelha#f1751e.dae in Resources */,
-				FEE61ACB28D3571600503463 /* Estrela_Variavel#f45600-obj.vox.png in Resources */,
-				FEE61AB828D3571600503463 /* Gigante_Azul#3583d0.dae in Resources */,
-				FEE61AC928D3571600503463 /* Estrela_Neutrons#c7ccc8-obj.vox.png in Resources */,
-				FEE61AD328D3571600503463 /* Gigante_Vermelha#ea3a28.dae in Resources */,
-				FEE61AD528D3571600503463 /* Gigante_Vermelha#fdb332.dae in Resources */,
+				FEE1EBB228DA06FB00F5C757 /* Ana_Branca#e4f5f7.dae in Resources */,
+				FEE1EBAD28DA06FB00F5C757 /* Ana_Amarela#f9e074.dae in Resources */,
+				D699598E28DCA41300DBC595 /* Ana_Amarela#fae594.dae in Resources */,
+				FEE1EBB028DA06FB00F5C757 /* Estrela_Neutrons#959dba.dae in Resources */,
+				FEE1EBAA28DA06FB00F5C757 /* Gigante_Vermelha#fdb332.dae in Resources */,
 				FE7328CB28C61E8B002B7FF9 /* Assets.xcassets in Resources */,
-				FEE61AB028D3571600503463 /* Ana_Branca#c8edfd-obj.dae in Resources */,
-				FEE61AB928D3571600503463 /* Gigante_Azul#4c94d3.dae in Resources */,
+				FEE1EBB528DA06FB00F5C757 /* Gigante_Azul#5eb2f5.dae in Resources */,
+				FEE1EBA828DA06FB00F5C757 /* Estrela_Variavel#f45600.dae in Resources */,
+				FEE1EBAE28DA06FB00F5C757 /* Anas_Marrons#b73713.dae in Resources */,
+				FEE1EBA628DA06FB00F5C757 /* Estrela_Variavel#d86600.dae in Resources */,
+				FEE1EBAB28DA06FB00F5C757 /* Gigante_Azul#3583d0.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,15 +500,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5F9ABE28CB871B00B79303 /* StarsModel.swift in Sources */,
+				D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */,
 				FE5F9AC028CF546F00B79303 /* UIImage.swift in Sources */,
 				FE7328C628C61E8A002B7FF9 /* ExploreViewController.swift in Sources */,
 				FE795D3D28C76EC700469569 /* CatTalksView.swift in Sources */,
 				59AA906928D0B73E00504FB8 /* UIView.swift in Sources */,
 				FE1D977B28D20BEC003DBFF4 /* ConstantsModel.swift in Sources */,
-				FEE61ADC28D362A200503463 /* VoxelView.swift in Sources */,
+				FEE61ADC28D362A200503463 /* VoxelTableViewCell.swift in Sources */,
 				FE7328F228C61FE2002B7FF9 /* ViewConfiguration.swift in Sources */,
 				FE795D3F28C780D400469569 /* CollectionViewCell.swift in Sources */,
 				FE5F9ABC28CB72B700B79303 /* AboutStarViewController.swift in Sources */,
+				D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */,
 				FE795D3B28C63E8D00469569 /* CALayer.swift in Sources */,
 				FE7328C228C61E8A002B7FF9 /* AppDelegate.swift in Sources */,
 				FE7328C428C61E8A002B7FF9 /* SceneDelegate.swift in Sources */,
@@ -712,14 +556,6 @@
 				FE7328CD28C61E8B002B7FF9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		FEE61A8A28D3571400503463 /* Ana_Amarela#f9e074-obj.dae */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FEE61A8B28D3571400503463 /* Base */,
-			);
-			name = "Ana_Amarela#f9e074-obj.dae";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -845,8 +681,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S2FBP6VDL8;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarMinds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -858,7 +695,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sarah.StarMinds2;
+				PRODUCT_BUNDLE_IDENTIFIER = robson.StarMinds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -875,8 +712,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S2FBP6VDL8;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarMinds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -888,7 +726,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sarah.StarMinds2;
+				PRODUCT_BUNDLE_IDENTIFIER = robson.StarMinds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
