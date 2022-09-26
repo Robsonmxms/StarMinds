@@ -57,7 +57,6 @@ extension AboutStarViewController: ViewCodeConfiguration {
 
         tableView.delegate = self
         tableView.dataSource = self
-
         tableView.register(VoxelTableViewCell.self, forCellReuseIdentifier: "VoxelCell")
         tableView.register(VoxDescriptionTableViewCell.self, forCellReuseIdentifier: "VoxDescriptionCell")
     }
