@@ -63,10 +63,11 @@ class MySet: SCNScene, SCNSceneRendererDelegate {
 
 }
 
-class StarView: SCNView {
+class StarView: SCNView{
+
 
     init() {
-        super.init(frame: .zero, options: [:])
+        super.init (frame: .zero, options: [:])
     }
 
     required init?(coder: NSCoder) {
@@ -76,8 +77,6 @@ class StarView: SCNView {
     func configure(with star: Star) {
 
         let scene = MySet()
-
-        //
 
         // Create and add a light to the scene:
         let lightNode = SCNNode()
@@ -101,6 +100,7 @@ class StarView: SCNView {
         ambientLightNode.position = SCNVector3(x: 10, y: 3, z: 6)
         ambientLightNode.rotation = SCNVector4(x: -0.99604034, y: 0.07114126, z: 0.05331763, w: 1.2901226)
         ambientLightNode.eulerAngles =  SCNVector3(x: -1.2863125, y: 0.106957085, z: 1.4986801e-08)
+
 
         scene.rootNode.addChildNode(ambientLightNode)
         scene.rootNode.addChildNode(lightNode)
@@ -127,6 +127,7 @@ class StarView: SCNView {
         camera.usesOrthographicProjection = true
         camera.orthographicScale = 3
 
+
         cameraNode.camera = camera
 
         cameraNode.position = SCNVector3(x: -0.18155792, y: 4.0028123, z: 0.537899)
@@ -144,6 +145,8 @@ class StarView: SCNView {
         material.roughness.contents = buildColor(color: voxel.color)
         material.emission.intensity = 0.5
 
+
+
         let scene = SCNScene(named: voxel.scene)!
         let node = scene.rootNode.childNodes[0]
 
@@ -151,6 +154,12 @@ class StarView: SCNView {
         node.position = SCNVector3(x: 0, y: 0, z: 3)
 
         node.geometry?.firstMaterial = material
+
+        let rotate = SCNAction.rotate(by: CGFloat(10.toRadian()), around: SCNVector3(x: 0, y: 0, z: -0.3), duration: 1)
+
+
+        let loop = SCNAction.repeatForever(rotate)
+        node.runAction(loop)
 
         return node
 
@@ -170,6 +179,12 @@ class StarView: SCNView {
 
         node.geometry?.firstMaterial = material
 
+        let rotate = SCNAction.rotate(by: CGFloat(10.toRadian()), around: SCNVector3(x: 0, y: 0, z: -0.3), duration: 1)
+
+
+        let loop = SCNAction.repeatForever(rotate)
+        node.runAction(loop)
+
         return node
 
     }
@@ -188,6 +203,12 @@ class StarView: SCNView {
         node.position = SCNVector3(x: 0, y: 0, z: 3)
 
         node.geometry?.firstMaterial = material
+
+        let rotate = SCNAction.rotate(by: CGFloat(10.toRadian()), around: SCNVector3(x: 0, y: 0, z: -0.3), duration: 1)
+
+
+        let loop = SCNAction.repeatForever(rotate)
+        node.runAction(loop)
 
         return node
 

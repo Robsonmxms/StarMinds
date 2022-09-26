@@ -73,9 +73,9 @@
                     "scene": "Ana_Branca#ebf8f9.dae",
                     "color": {
                         "id": 1,
-                        "red": 161,
-                        "green": 202,
-                        "blue": 209
+                        "red": 193,
+                        "green": 232,
+                        "blue": 226
                     }
                 },
                 {
@@ -253,9 +253,9 @@
                     "scene": "Gigante_Vermelha#f1751e.dae",
                     "color": {
                         "id": 1,
-                        "red": 241,
-                        "green": 117,
-                        "blue": 30
+                        "red": 255,
+                        "green": 127,
+                        "blue": 80
                     }
                 },
                 {
@@ -285,7 +285,7 @@
             "voxNode": [
                 {
                     "id": 0,
-                    "scene": "Gigante_Azul#4c94d3.dae",
+                    "scene": "Gigante_Azul#3583d0.dae",
                     "color": {
                         "id": 0,
                         "red": 76,
@@ -295,12 +295,12 @@
                 },
                 {
                     "id": 1,
-                    "scene": "Gigante_Azul#3583d0.dae",
+                    "scene": "Gigante_Azul#4c94d3.dae",
                     "color": {
                         "id": 1,
-                        "red": 53,
-                        "green": 131,
-                        "blue": 208
+                        "red": 90,
+                        "green": 151,
+                        "blue": 255
                     }
                 },
                 {
