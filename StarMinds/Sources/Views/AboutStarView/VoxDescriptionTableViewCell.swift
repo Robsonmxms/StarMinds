@@ -23,6 +23,15 @@ class VoxDescriptionTableViewCell: UITableViewCell {
         applyViewCode()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        stack.roundCorners(
+            [.topLeft,.topRight],
+            radius: ScreenSize.width
+        )
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -43,11 +52,11 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: ScreenSize.height*0.08
+                constant: 100
             ),
             stack.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
-                multiplier: 0.9
+                constant: ScreenSize.width*0.25
             ),
             stack.centerXAnchor.constraint(
                 equalTo: contentView.centerXAnchor
@@ -61,20 +70,19 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
             ),
             descriptionLabel.topAnchor.constraint(
                 equalTo: stack.topAnchor,
-                constant: ScreenSize.height*0.025
+                constant: ScreenSize.height*0.1
             ),
             descriptionLabel.bottomAnchor.constraint(
-                equalTo: stack.bottomAnchor,
-                constant: ScreenSize.height*0.025
+                equalTo: contentView.bottomAnchor,
+                constant: -ScreenSize.height*0.05
             )
         ])
     }
 
     func configureViews() {
-
+        print(contentView.bounds.width)
         stack.backgroundColor = UIColor(named: "SheetBackground")
         stack.clipsToBounds = true
-        stack.layer.cornerRadius = ScreenSize.width*0.05
         stack.axis = .vertical
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false

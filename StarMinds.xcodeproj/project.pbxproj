@@ -10,6 +10,7 @@
 		59AA906928D0B73E00504FB8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA906828D0B73E00504FB8 /* UIView.swift */; };
 		D61BF62428E1E31000E18494 /* CatPhrases.json in Resources */ = {isa = PBXBuildFile; fileRef = D61BF62328E1E31000E18494 /* CatPhrases.json */; };
 		D61BF62628E1E4DF00E18494 /* CatPhrasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61BF62528E1E4DF00E18494 /* CatPhrasesModel.swift */; };
+		D61BF62A28E33C9100E18494 /* cat-meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D61BF62928E33C9100E18494 /* cat-meow.mp3 */; };
 		D699598E28DCA41300DBC595 /* Ana_Amarela#fae594.dae in Resources */ = {isa = PBXBuildFile; fileRef = D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */; };
 		D6E1B39A28DB382C004D66F7 /* CellTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */; };
 		D6E1B39C28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		59AA906828D0B73E00504FB8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D61BF62328E1E31000E18494 /* CatPhrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CatPhrases.json; sourceTree = "<group>"; };
 		D61BF62528E1E4DF00E18494 /* CatPhrasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPhrasesModel.swift; sourceTree = "<group>"; };
+		D61BF62928E33C9100E18494 /* cat-meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cat-meow.mp3"; sourceTree = "<group>"; };
 		D699598D28DCA41300DBC595 /* Ana_Amarela#fae594.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Ana_Amarela#fae594.dae"; sourceTree = "<group>"; };
 		D6E1B39928DB382C004D66F7 /* CellTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeModel.swift; sourceTree = "<group>"; };
 		D6E1B39B28DB49D3004D66F7 /* VoxDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxDescriptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		FE7328F828C62E3E002B7FF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D61BF62928E33C9100E18494 /* cat-meow.mp3 */,
 				FEE1EB8D28DA06CE00F5C757 /* art.assets */,
 				FECDA6B528C6395300E2485E /* 89151-stars.json */,
 				FE7328CA28C61E8B002B7FF9 /* Assets.xcassets */,
@@ -446,6 +449,7 @@
 				FEE1EBB428DA06FB00F5C757 /* Estrela_Neutrons#a7c3cb.dae in Resources */,
 				FEE1EBA428DA06FB00F5C757 /* Estrela_Variavel#d8a201.dae in Resources */,
 				FEE1EBA328DA06FB00F5C757 /* Ana_Amarela#f4c06a.dae in Resources */,
+				D61BF62A28E33C9100E18494 /* cat-meow.mp3 in Resources */,
 				FE7328CE28C61E8B002B7FF9 /* LaunchScreen.storyboard in Resources */,
 				FEE1EBA928DA06FB00F5C757 /* Ana_Branca#ebf8f9.dae in Resources */,
 				FEE1EBA728DA06FB00F5C757 /* Estrela_Neutrons#c7ccc8.dae in Resources */,

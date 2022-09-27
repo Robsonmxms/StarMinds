@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SceneKit
 
 class AboutStarViewController: UITableViewController {
     private var closeIcon = UIImage()
@@ -17,6 +16,14 @@ class AboutStarViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applyViewCode()
+    }
+
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        var insets = tableView.safeAreaInsets
+        insets.bottom = 0
+        tableView.contentInset = insets
+//        tableView.contentInsetAdjustmentBehavior = .never
     }
 
     init(with star: Star) {
@@ -54,11 +61,11 @@ extension AboutStarViewController: ViewCodeConfiguration {
 
         tableView.backgroundColor = UIColor(named: "CardBackground")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(VoxelTableViewCell.self, forCellReuseIdentifier: "VoxelCell")
         tableView.register(VoxDescriptionTableViewCell.self, forCellReuseIdentifier: "VoxDescriptionCell")
+
     }
 
     @objc func close() {
@@ -80,6 +87,7 @@ extension AboutStarViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentItem = CellType.allCases[indexPath.section]
         switch currentItem {
