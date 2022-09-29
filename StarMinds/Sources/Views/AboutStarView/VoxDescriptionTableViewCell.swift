@@ -13,6 +13,8 @@ class VoxDescriptionTableViewCell: UITableViewCell {
 
     private var descriptionLabel = UILabel()
 
+    private var catOnMountainTop = CatOnMountainTop()
+
     override init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
@@ -21,6 +23,15 @@ class VoxDescriptionTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         selectionStyle = .none
         applyViewCode()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        stack.roundCorners(
+            [.topLeft,.topRight],
+            radius: ScreenSize.width
+        )
     }
 
     required init?(coder: NSCoder) {
@@ -35,6 +46,7 @@ class VoxDescriptionTableViewCell: UITableViewCell {
 
 extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
     func buildHierarchy() {
+        contentView.addSubview(catOnMountainTop)
         stack.addArrangedSubview(descriptionLabel)
         contentView.addSubview(stack)
     }
@@ -43,11 +55,11 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: ScreenSize.height*0.08
+                constant: 100
             ),
             stack.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
-                multiplier: 0.9
+                constant: ScreenSize.width*0.25
             ),
             stack.centerXAnchor.constraint(
                 equalTo: contentView.centerXAnchor
@@ -55,29 +67,37 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
             stack.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor
             ),
+            catOnMountainTop.bottomAnchor.constraint(
+                equalTo: stack.topAnchor,
+                constant: ScreenSize.height*0.005
+            ),
+            catOnMountainTop.centerXAnchor.constraint(
+                equalTo: stack.centerXAnchor
+            ),
             descriptionLabel.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
                 multiplier: 0.8
             ),
             descriptionLabel.topAnchor.constraint(
                 equalTo: stack.topAnchor,
-                constant: ScreenSize.height*0.025
+                constant: ScreenSize.height*0.1
             ),
             descriptionLabel.bottomAnchor.constraint(
-                equalTo: stack.bottomAnchor,
-                constant: ScreenSize.height*0.025
+                equalTo: contentView.bottomAnchor,
+                constant: -ScreenSize.height*0.06
             )
         ])
     }
 
     func configureViews() {
-
+        print(contentView.bounds.width)
         stack.backgroundColor = UIColor(named: "SheetBackground")
         stack.clipsToBounds = true
-        stack.layer.cornerRadius = ScreenSize.width*0.05
         stack.axis = .vertical
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
+
+        catOnMountainTop.translatesAutoresizingMaskIntoConstraints = false
 
         descriptionLabel.font = UIFont.systemFont(
             ofSize: ScreenSize.width*0.056,

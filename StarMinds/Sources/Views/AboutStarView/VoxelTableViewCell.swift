@@ -40,7 +40,8 @@ extension VoxelTableViewCell: ViewCodeConfiguration {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             starView.topAnchor.constraint(
-                equalTo: contentView.topAnchor
+                equalTo: contentView.topAnchor,
+                constant: ScreenSize.height*0.05
             ),
             starView.heightAnchor.constraint(
                 equalToConstant: 0.4*ScreenSize.height
