@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 extension UIView {
     func addParallax(_ amount: Int) {
@@ -43,69 +42,40 @@ extension UIView {
          self.layer.mask = mask
     }
 
-//    var players: [URL:AVAudioPlayer]
-//    var duplicatePlayers: [AVAudioPlayer]
+    func tapped(_ numberOfTouches: Int) -> Int{
+        var numberOfTouches = numberOfTouches+1
 
-    func playSound(
-        soundName: String,
-        playersArray: [URL:AVAudioPlayer],
-        duplicatePlayersArray: [AVAudioPlayer]
-    ) {
-        var players = playersArray
-        var duplicatePlayers = duplicatePlayersArray
-            guard let soundUrl = Bundle.main.url(forResource: soundName, withExtension: ".mp3")
-            else {
-                return
-            }
+        switch numberOfTouches {
+        case 1:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
 
-            if let player = players[soundUrl] {
-                if !player.isPlaying {
-                    player.prepareToPlay()
-                    player.play()
-                    return
-                }
-                createADuplicatedPlayer()
-                return
-            }
+        case 2:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
 
-            createANewPlayer()
+        case 3:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
 
-            func createANewPlayer() {
-                do{
-                    let player = try AVAudioPlayer(contentsOf: soundUrl)
-                    players[soundUrl] = player
-                    player.prepareToPlay()
-                    player.play()
-                } catch {
-                    print("Could not play sound file!")
-                }
-            }
+        case 4:
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
 
-            func createADuplicatedPlayer() {
-                let newPlayer = try! AVAudioPlayer(contentsOf: soundUrl)
-                duplicatePlayers.append(newPlayer)
-                newPlayer.prepareToPlay()
-                newPlayer.play()
-            }
+        case 5:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
 
+        case 6:
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+
+        default:
+            let generator = UISelectionFeedbackGenerator()
+            generator.selectionChanged()
+            numberOfTouches = 0
         }
 
-    private func playMutipleSounds(soundFileNames: [String]) {
-        for soundName in soundFileNames {
-            playSound(soundName: soundName)
-        }
+        return numberOfTouches
     }
-
-    private func playMutipleSounds(soundFileNames: [String], withDelay: Int) {
-        DispatchQueue.global(qos: .default).async {
-            for soundName in soundFileNames {
-                  DispatchQueue.main.async {
-                      self.playSound(soundName: soundName)
-                  }
-
-                usleep(useconds_t(1000000 / withDelay))
-              }
-         }
-    }
-
 }

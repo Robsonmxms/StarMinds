@@ -16,6 +16,8 @@ class ExploreViewController: UIViewController {
 
     private var catTalksView: CatTalksView = CatTalksView()
 
+    private var numberOfTouches = 0
+
     private var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
@@ -25,7 +27,6 @@ class ExploreViewController: UIViewController {
         )
         return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
     }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundColor()
@@ -145,6 +146,9 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let star = starModel![indexPath.row]
+        self.numberOfTouches = self.collectionView.tapped(
+            self.numberOfTouches
+        )
         navigation(with: star)
     }
 

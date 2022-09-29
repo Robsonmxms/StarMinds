@@ -13,6 +13,7 @@ class CatTalksView: UIView {
     private var catImage = UIImageView()
     private var catLabel = UILabel()
     private var catPhrases = CatPhasesModel.loadJson()
+    private var numberOfTouches = 0
 
 
     override init(frame: CGRect) {
@@ -22,6 +23,7 @@ class CatTalksView: UIView {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isTalking.toggle()
+        numberOfTouches = tapped(numberOfTouches)
         applyViewCode()
     }
 

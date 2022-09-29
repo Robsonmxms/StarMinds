@@ -13,6 +13,8 @@ class VoxDescriptionTableViewCell: UITableViewCell {
 
     private var descriptionLabel = UILabel()
 
+    private var catOnMountainTop = CatOnMountainTop()
+
     override init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
@@ -44,6 +46,7 @@ class VoxDescriptionTableViewCell: UITableViewCell {
 
 extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
     func buildHierarchy() {
+        contentView.addSubview(catOnMountainTop)
         stack.addArrangedSubview(descriptionLabel)
         contentView.addSubview(stack)
     }
@@ -64,6 +67,13 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
             stack.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor
             ),
+            catOnMountainTop.bottomAnchor.constraint(
+                equalTo: stack.topAnchor,
+                constant: ScreenSize.height*0.005
+            ),
+            catOnMountainTop.centerXAnchor.constraint(
+                equalTo: stack.centerXAnchor
+            ),
             descriptionLabel.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
                 multiplier: 0.8
@@ -74,7 +84,7 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
             ),
             descriptionLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -ScreenSize.height*0.05
+                constant: -ScreenSize.height*0.06
             )
         ])
     }
@@ -86,6 +96,8 @@ extension VoxDescriptionTableViewCell: ViewCodeConfiguration {
         stack.axis = .vertical
         stack.alignment = .center
         stack.translatesAutoresizingMaskIntoConstraints = false
+
+        catOnMountainTop.translatesAutoresizingMaskIntoConstraints = false
 
         descriptionLabel.font = UIFont.systemFont(
             ofSize: ScreenSize.width*0.056,

@@ -23,7 +23,7 @@ class AboutStarViewController: UITableViewController {
         var insets = tableView.safeAreaInsets
         insets.bottom = 0
         tableView.contentInset = insets
-//        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.contentInsetAdjustmentBehavior = .never
     }
 
     init(with star: Star) {
