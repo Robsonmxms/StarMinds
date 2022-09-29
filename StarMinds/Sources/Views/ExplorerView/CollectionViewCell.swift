@@ -26,6 +26,7 @@ class CollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 extension CollectionViewCell: ViewCodeConfiguration {
@@ -81,6 +82,7 @@ extension CollectionViewCell: ViewCodeConfiguration {
         card.translatesAutoresizingMaskIntoConstraints = false
 
         starImage.contentMode = .scaleAspectFill
+        starImage.isAccessibilityElement = true
         starImage.addParallax(30)
         starImage.translatesAutoresizingMaskIntoConstraints = false
 
@@ -110,13 +112,14 @@ extension CollectionViewCell: ViewCodeConfiguration {
     }
 
     func configure(with star: Star) {
-        guard let uiImage = UIImage(named: star.image) else {
+        guard let uiImage = UIImage(named: star.image.path) else {
             fatalError("Could not load image")
         }
         let size: CGSize = StarModel.getSize(star.info.name)
         starImage.image = uiImage.resizeImage(
             size
         )
+        starImage.accessibilityLabel = star.image.voiceDescription
         titleLabel.text = star.info.name.rawValue
         descriptionLabel.text = star.info.description
     }

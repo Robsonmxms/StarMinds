@@ -6,6 +6,7 @@
 //
 
 import UIKit
+// swiftlint: disable identifier_name
 
 // MARK: - StarModel
 struct StarModel: Codable {
@@ -55,18 +56,66 @@ struct StarModel: Codable {
             height: ScreenSize.width*value
         )
     }
-}
 
+    static func mockStar() -> Star {
+        return Star(
+            id: 0,
+            info: Info(
+                id: 0,
+                name: Name.neutron,
+                description: ""
+            ),
+            image: Image(
+                id: 0,
+                path: "",
+                voiceDescription: ""
+            ),
+            voxNode: [
+                VoxNode(
+                    id: 0,
+                    scene: "",
+                    color: StarColor(
+                        id: 0,
+                        red: 0,
+                        green: 0,
+                        blue: 0
+                    )
+                ),
+                VoxNode(
+                    id: 0,
+                    scene: "",
+                    color: StarColor(
+                        id: 0,
+                        red: 0,
+                        green: 0,
+                        blue: 0
+                    )
+                ),
+                VoxNode(
+                    id: 0,
+                    scene: "",
+                    color: StarColor(
+                        id: 0,
+                        red: 0,
+                        green: 0,
+                        blue: 0
+                    )
+                )
+            ]
+        )
+    }
+}
 // MARK: - Star
 struct Star: Codable {
     let id: Int
     let info: Info
-    let image, voxel: String
+    let image: Image
+    let voxNode: [VoxNode]
 
     private enum CodingKeys: String, CodingKey {
         case id, info
         case image
-        case voxel
+        case voxNode
     }
 }
 
@@ -90,4 +139,39 @@ enum Name: String, Codable {
     case variable = "Estrela Variável"
     case redGiant = "Gigante Vermelha"
     case blueSupergiant = "Supergigante Azul"
+}
+
+// MARK: - Image
+struct Image: Codable {
+    let id: Int
+    let path: String
+    let voiceDescription: String
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case path, voiceDescription
+    }
+}
+
+// MARK: - VoxNode
+struct VoxNode: Codable {
+    let id: Int
+    let scene: String
+    let color: StarColor
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case scene, color
+    }
+}
+
+// MARK: - StarColor
+struct StarColor: Codable {
+    let id: Int
+    let red, green, blue: CGFloat
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case red, green, blue
+    }
 }
